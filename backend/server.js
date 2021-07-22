@@ -3,6 +3,7 @@ let mongoose = require('mongoose');
 let cors = require('cors');
 let bodyParser = require('body-parser');
 let dbConfig = require('./database/db');
+const createError = require('http-errors');
 
 // Express Route
 const studentRoute = require('../backend/routes/student.route')
@@ -10,7 +11,10 @@ const studentRoute = require('../backend/routes/student.route')
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.db, {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useFindAndModify: false,
+  useCreateIndex: true
 }).then(() => {
   console.log('Database sucessfully connected!')
 },
@@ -20,18 +24,17 @@ mongoose.connect(dbConfig.db, {
 )
 
 const app = express();
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
+app.use(express.json());
+app.use(express.urlencoded({
   extended: true
 }));
 app.use(cors());
 app.use('/students', studentRoute)
 
-
 // PORT
 const port = process.env.PORT || 4000;
 const server = app.listen(port, () => {
-  console.log('Connected to port ' + port)
+  console.log('Server runing on port ' + port)
 })
 
 // 404 Error

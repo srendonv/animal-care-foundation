@@ -1,6 +1,6 @@
-let mongoose = require('mongoose'),
-  express = require('express'),
-  router = express.Router();
+let mongoose = require('mongoose');
+let express = require('express');
+let router = express.Router();
 
 // Student Model
 let studentSchema = require('../models/Student');
@@ -18,7 +18,7 @@ router.route('/create-student').post((req, res, next) => {
 });
 
 // READ Students
-router.route('/').get((req, res) => {
+router.route('/').get((req, res, next) => {
   studentSchema.find((error, data) => {
     if (error) {
       return next(error)
@@ -29,7 +29,7 @@ router.route('/').get((req, res) => {
 })
 
 // Get Single Student
-router.route('/edit-student/:id').get((req, res) => {
+router.route('/edit-student/:id').get((req, res, next) => {
   studentSchema.findById(req.params.id, (error, data) => {
     if (error) {
       return next(error)
@@ -47,7 +47,6 @@ router.route('/update-student/:id').put((req, res, next) => {
   }, (error, data) => {
     if (error) {
       return next(error);
-      console.log(error)
     } else {
       res.json(data)
       console.log('Student updated successfully !')
