@@ -1,5 +1,5 @@
-//Modify APP_ENV to production or development in backend/.env
-let api = require('../config/env')
+//Modify REACT_APP_API_ENV to production or development in ./.env
+let api = require('../../src/config/env')
 let env = api.appEnvironment;
 
 if(env === "development"){
