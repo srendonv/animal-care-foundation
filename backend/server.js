@@ -1,12 +1,14 @@
-const fs = require('fs');
-const http = require('http');
-const https = require('https');
-const express = require('express');
+let fs = require('fs');
+let http = require('http');
+let https = require('https');
+let express = require('express');
 let mongoose = require('mongoose');
 let cors = require('cors');
 let bodyParser = require('body-parser');
 let dbConfig = require('./database/db');
-const createError = require('http-errors');
+let createError = require('http-errors');
+let api = require('../src/config/env')
+let env = api.appEnvironment;
 
 // Express Route
 const studentRoute = require('../backend/routes/student.route')
@@ -28,6 +30,12 @@ mongoose.connect(dbConfig.db, {
 
 const app = express();
 
+//PORT
+const portHttp = process.env.PORT || 4000;
+const portHttps = process.env.PORT || 4040;
+
+if(env === "production"){
+
 // Certificate
 const privateKey = fs.readFileSync('./cert/privkey.pem', 'utf8');
 const certificate = fs.readFileSync('./cert/cert.pem', 'utf8');
@@ -43,21 +51,19 @@ const credentials = {
 const httpServer = http.createServer(app);
 const httpsServer = https.createServer(credentials, app);
 
-//PORT
-const portHttp = process.env.PORT || 4000;
-const portHttps = process.env.PORT || 4040;
-
 httpServer.listen(portHttp, () => {
-	console.log('HTTP Server running on port '+ portHttp);
+	console.log('HTTP Server running on production on port '+ portHttp);
 });
 
 httpsServer.listen(portHttps, () => {
-	console.log('HTTPS Server running on port '+ portHttps);
+	console.log('HTTPS Server running on production on port '+ portHttps);
 });
 
-// const server = app.listen(port, () => {
-//   console.log('Server runing on port ' + port)
-// })
+} else if(env === "development"){
+const server = app.listen(portHttp, () => {
+  console.log('Server runing on development on port ' + portHttp)
+})
+}
 
 app.use(express.json());
 app.use(express.urlencoded({
