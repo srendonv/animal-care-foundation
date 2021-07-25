@@ -12,6 +12,9 @@ let env = api.appEnvironment;
 
 // Express Route
 const studentRoute = require('../backend/routes/student.route')
+const customerRoute = require('../backend/routes/customer.route')
+const datesRoute = require('../backend/routes/date.route')
+
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
