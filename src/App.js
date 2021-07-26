@@ -16,8 +16,12 @@ import StudentList from "./components/student-list.component";
 import Navbar from "./components/Navbar/Navbar"
 import servicesComponent from "./components/servicesComponent";
 
+// import Login from "./components/Login";
+import CustomerCreate from "./components/CustomerCreate";
+
 function App() {
-  return (<Router>
+  return (
+  <Router>
     <div className="App">
       <header className="App-header">  
         <Navbar />
@@ -33,6 +37,7 @@ function App() {
                 <Route path="/edit-student/:id" component={EditStudent} />
                 <Route path="/student-list" component={StudentList} />
                 <Route path="/services" component={servicesComponent} />
+                <Route path="/customer-create" component={CustomerCreate} />
               </Switch>
             </div>
           </Col>
