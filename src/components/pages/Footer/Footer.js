@@ -23,7 +23,7 @@ const Footer = () => {
     return (  
         
         <div className="footer-container">         
-            <Container>
+            <Container fluid="md">
                 <Row>
                     <Col>
                     <Link
