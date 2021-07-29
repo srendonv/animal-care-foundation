@@ -10,14 +10,14 @@ import "./assets/css/App.css";
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 
-import CreateStudent from "./components/create-student.component";
+import CreateStudent from "./components/CreateStudent/create-student.component";
 import EditStudent from "./components/edit-student.component";
 import StudentList from "./components/student-list.component";
 import Navbar from "./components/Navbar/Navbar"
 import servicesComponent from "./components/servicesComponent";
-
 // import Login from "./components/Login";
 import CustomerCreate from "./components/CustomerCreate";
+import Footer from "./components/pages/Footer/Footer"
 
 function App() {
   return (
@@ -35,14 +35,20 @@ function App() {
                 <Route exact path='/' component={CreateStudent} />                
                 <Route path="/create-student" component={CreateStudent} />
                 <Route path="/edit-student/:id" component={EditStudent} />
+<<<<<<< HEAD
                 <Route path="/student-list" component={StudentList} />
                 <Route path="/services" component={servicesComponent} />
                 <Route path="/customer-create" component={CustomerCreate} />
+=======
+                <Route path="/student-list" component={StudentList} />                
+>>>>>>> development_mcastan0
               </Switch>
             </div>
           </Col>
         </Row>
-      </Container>     
+      </Container>  
+      
+      <Footer />
     </div>
   </Router>);
 }

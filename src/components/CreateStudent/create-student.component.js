@@ -2,7 +2,8 @@ import React, { Component } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-import { backHost } from '../config/env';
+import "./CreateStudent.css"
+import {backHost} from '../../config/env';
 
 export default class CreateStudent extends Component {
 
@@ -56,6 +57,7 @@ export default class CreateStudent extends Component {
   }
 
   render() {
+<<<<<<< HEAD:src/components/create-student.component.js
     return (<div className="form-wrapper">
       <Form onSubmit={this.onSubmit}>
         <Form.Group controlId="Name">
@@ -81,12 +83,33 @@ export default class CreateStudent extends Component {
             value={this.state.rollno}
             onChange={this.onChangeStudentRollno} />
         </Form.Group>
+=======
+    return (
+      <div className="component-container">    
+        <div className="form-wrapper">
+          <Form onSubmit={this.onSubmit}>
+            <Form.Group controlId="Name">
+              <Form.Label>Name</Form.Label>
+              <Form.Control type="text" value={this.state.name} onChange={this.onChangeStudentName} />
+            </Form.Group>
 
-        {/* <Button variant="danger" size="lg" block="block" type="submit"> */}
-        <Button variant="dark" size="lg" block="block" type="submit">
-          Create Student
-        </Button>
-      </Form>
-    </div>);
+            <Form.Group controlId="Email">
+              <Form.Label>Email</Form.Label>
+              <Form.Control type="email" value={this.state.email} onChange={this.onChangeStudentEmail} />
+            </Form.Group>
+
+            <Form.Group controlId="Name">
+              <Form.Label>Roll No</Form.Label>
+              <Form.Control type="text" value={this.state.rollno} onChange={this.onChangeStudentRollno} />
+            </Form.Group>
+>>>>>>> development_mcastan0:src/components/CreateStudent/create-student.component.js
+
+            {/* <Button variant="danger" size="lg" block="block" type="submit"> */}
+            <Button variant="dark" size="lg" block="block" type="submit">
+              Create Student
+            </Button>
+          </Form>
+        </div>
+      </div>);
   }
 }
