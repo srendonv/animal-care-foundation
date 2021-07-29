@@ -8,7 +8,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./assets/css/App.css";
 
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { HashRouter as Router, Switch, Route} from "react-router-dom";
 
 import CreateStudent from "./components/CreateStudent/create-student.component";
 import EditStudent from "./components/edit-student.component";
@@ -17,29 +18,31 @@ import Navbar from "./components/Navbar/Navbar"
 import Footer from "./components/pages/Footer/Footer"
 
 function App() {
-  return (<Router>
-    <div className="App">
-      <header className="App-header">  
-        <Navbar />
-      </header>
+  return (
+    <Router>
+      <div className="App">
+        <header className="App-header">  
+          <Navbar />
+        </header>
 
-      <Container>
-        <Row>
-          <Col md={12}>
-            <div className="wrapper">
-              <Switch>
-                <Route exact path='/' component={CreateStudent} />                
-                <Route path="/create-student" component={CreateStudent} />
-                <Route path="/edit-student/:id" component={EditStudent} />
-                <Route path="/student-list" component={StudentList} />                
-              </Switch>
-            </div>
-          </Col>
-        </Row>
-      </Container>  
-      
-      <Footer />
-    </div>
-  </Router>);
+        <Container>
+          <Row>
+            <Col md={12}>
+              <div className="wrapper">
+                <Switch>
+                  <Route exact path='/' component={CreateStudent} />                
+                  <Route path="/create-student" component={CreateStudent} />
+                  <Route path="/edit-student/:id" component={EditStudent} />
+                  <Route path="/student-list" component={StudentList} />                
+                </Switch>
+              </div>
+            </Col>
+          </Row>
+        </Container>  
+        
+        <Footer />
+      </div>
+    </Router>
+  );
 }
 export default App;
