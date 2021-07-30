@@ -74,6 +74,7 @@ app.use(express.urlencoded({
 }));
 app.use(cors());
 app.use('/students', studentRoute)
+app.use('/dates', datesRoute)
 
 // 404 Error
 app.use((req, res, next) => {
