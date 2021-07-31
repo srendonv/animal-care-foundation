@@ -10,11 +10,11 @@ let createError = require('http-errors');
 let api = require('../src/config/env')
 let env = api.appEnvironment;
 
-// Express Route
+// Express Routes
 const studentRoute = require('../backend/routes/student.route')
 const customerRoute = require('../backend/routes/customer.route')
 const datesRoute = require('../backend/routes/date.route')
-
+const vetRoute = require ('../backend/routes/vet.route')
 
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
@@ -75,6 +75,7 @@ app.use(express.urlencoded({
 app.use(cors());
 app.use('/students', studentRoute)
 app.use('/dates', datesRoute)
+app.use('/vets', vetRoute);
 
 // 404 Error
 app.use((req, res, next) => {

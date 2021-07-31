@@ -8,12 +8,14 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./assets/css/App.css";
 
 // import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { HashRouter as Router, Switch, Route} from "react-router-dom";
 
-import CreateStudent from "./components/create-student.component";
+import CreateStudent from "./components/CreateStudent/create-student.component";
 import EditStudent from "./components/edit-student.component";
 import StudentList from "./components/student-list.component";
 import Navbar from "./components/Navbar/Navbar"
+import Footer from "./components/pages/Footer/Footer"
 
 // import Login from "./components/Login";
 import CustomerCreate from "./components/CustomerCreate";
@@ -35,7 +37,6 @@ function App() {
                 <Route path="/create-student" component={CreateStudent} />
                 <Route path="/edit-student/:id" component={EditStudent} />
                 <Route path="/student-list" component={StudentList} />
-                <Route path="/student-list" component={StudentList} />
                 <Route path="/customer-create" component={CustomerCreate} />
               </Switch>
             </div>
@@ -43,6 +44,7 @@ function App() {
         </Row>
       </Container>     
     </div>
+    <Footer />
   </Router>);
 }
 export default App;
