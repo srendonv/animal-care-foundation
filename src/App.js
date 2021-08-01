@@ -35,13 +35,9 @@ function App() {
                 <Route exact path='/' component={CreateStudent} />                
                 <Route path="/create-student" component={CreateStudent} />
                 <Route path="/edit-student/:id" component={EditStudent} />
-<<<<<<< HEAD
                 <Route path="/student-list" component={StudentList} />
                 <Route path="/services" component={servicesComponent} />
                 <Route path="/customer-create" component={CustomerCreate} />
-=======
-                <Route path="/student-list" component={StudentList} />                
->>>>>>> development_mcastan0
               </Switch>
             </div>
           </Col>
