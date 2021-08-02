@@ -8,10 +8,12 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
+    "classnames": "^2.3.1",
     "concurrently": "^6.2.0",
     "express": "^4.17.1",
     "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
     "leaflet": "^1.7.1",
     "mongoose": "^5.13.5",
     "passport": "^0.4.1",
@@ -21,8 +23,11 @@
     "react-dom": "^16.9.0",
     "react-icons": "^4.2.0",
     "react-leaflet": "^3.2.0",
-    "react-router-dom": "^5.0.1",
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
+    "redux": "^4.1.0",
+    "redux-thunk": "^2.3.0",
     "validator": "^13.6.0"
   },
   "scripts": {
@@ -34,6 +39,7 @@
     "client": "npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
+  "proxy": "http://localhost:4000",
   "eslintConfig": {
     "extends": "react-app"
   },
