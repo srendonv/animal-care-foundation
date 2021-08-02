@@ -1,6 +1,7 @@
-let mongoose = require('mongoose');
-let express = require('express');
-let router = express.Router();
+const mongoose = require('mongoose');
+const express = require('express');
+const router = express.Router();
+const mailer = require("./../config/mailer")
 
 // Student Model
 let studentSchema = require('../models/Student');
@@ -8,11 +9,18 @@ let studentSchema = require('../models/Student');
 // CREATE Student
 router.route('/create-student').post((req, res, next) => {
   studentSchema.create(req.body, (error, data) => {
+    const user = {
+      "name" : req.body.name,
+      "email": req.body.email,
+      "rollno": req.body.rollno
+    }
     if (error) {
       return next(error)
-    } else {
-      console.log(data)
-      res.json(data)
+    } else {      
+      console.log(data);
+      res.json(data);   
+      console.log(user);
+      mailer.sendEmail(user);
     }
   })
 });

@@ -13,7 +13,9 @@ if(api_env === "development"){
     appEnvironment: process.env.API_ENV,
     mongoDb: process.env.MONGO_DB,
     mongoHost: process.env.MONGO_HOST,  
-    backHost: process.env.REACT_APP_API_DEV_HOST 
+    backHost: process.env.REACT_APP_API_DEV_HOST,
+    mailUser: process.env.REACT_APP_MAIL_USER,
+    mailPass: process.env.REACT_APP_MAIL_PASS
       
  };
  console.log("backHost: " + process.env.REACT_APP_API_DEV_HOST)
@@ -32,7 +34,9 @@ if(api_env === "production") {
     mongoPwd: process.env.MONGO_PWD,
     mongoDb: process.env.MONGO_DB,
     mongoHost: process.env.MONGO_HOST,
-    backHost: process.env.REACT_APP_API_PROD_HOST 
+    backHost: process.env.REACT_APP_API_PROD_HOST,
+    mailUser: process.env.REACT_APP_MAIL_USER,
+    mailPass: process.env.REACT_APP_MAIL_PASS
   };  
 
   console.log("backHost: " + process.env.REACT_APP_API_PROD_HOST)

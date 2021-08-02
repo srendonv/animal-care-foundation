@@ -14,6 +14,7 @@ let env = api.appEnvironment;
 const studentRoute = require('../backend/routes/student.route')
 const vetRoute = require ('../backend/routes/vet.route')
 
+
 // Connecting mongoDB Database
 mongoose.Promise = global.Promise;
 mongoose.connect(dbConfig.db, {
@@ -22,7 +23,7 @@ mongoose.connect(dbConfig.db, {
   useFindAndModify: false,
   useCreateIndex: true
 }).then(() => {
-  console.log('Database sucessfully connected!')
+  console.log('Database sucessfully connected!'); 
 },
   error => {
     console.log('Could not connect to database : ' + error)
