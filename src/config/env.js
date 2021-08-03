@@ -13,11 +13,18 @@ if (api_env === "development") {
   module.exports = {
     appEnvironment: process.env.API_ENV,
     mongoDb: process.env.MONGO_DB,
-    mongoHost: process.env.MONGO_HOST,
+    mongoHost: process.env.MONGO_HOST,  
     backHost: process.env.REACT_APP_API_DEV_HOST,
-  };
-  console.log("backHost: " + process.env.REACT_APP_API_DEV_HOST);
-} else if (api_env === "production") {
+    mailUser: process.env.REACT_APP_MAIL_USER,
+    mailPass: process.env.REACT_APP_MAIL_PASS
+      
+ };
+ console.log("backHost: " + process.env.REACT_APP_API_DEV_HOST)
+
+} else 
+
+if(api_env === "production") {
+
   console.log("ingreso a api_prod");
 
   require("dotenv").config({
@@ -31,7 +38,11 @@ if (api_env === "development") {
     mongoDb: process.env.MONGO_DB,
     mongoHost: process.env.MONGO_HOST,
     backHost: process.env.REACT_APP_API_PROD_HOST,
-  };
+    mailUser: process.env.REACT_APP_MAIL_USER,
+    mailPass: process.env.REACT_APP_MAIL_PASS
+  };  
+
+  console.log("backHost: " + process.env.REACT_APP_API_PROD_HOST)
 
   console.log("backHost: " + process.env.REACT_APP_API_PROD_HOST);
 }
