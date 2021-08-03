@@ -10,7 +10,8 @@ import Col from "react-bootstrap/Col";
 import "bootstrap/dist/css/bootstrap.css";
 import "./assets/css/App.css";
 
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
+import { HashRouter as Router, Switch, Route} from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 
@@ -67,11 +68,8 @@ class App extends Component {
                       <Route path="/edit-student/:id" component={EditStudent} />
                       <Route path="/student-list" component={StudentList} />
                       <Route path="/services" component={servicesComponent} />
-                      <Route
-                        path="/customer-create"
-                        component={CustomerCreate}
-                      />
-                      <PrivateRoute
+                      <Route path="/customer-create" component={CustomerCreate} />
+                      <PrivateRoute 
                         exact
                         path="/dashboard"
                         component={Dashboard}

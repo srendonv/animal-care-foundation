@@ -13,9 +13,9 @@ const passport = require("passport");
 
 // Express Routes
 const studentRoute = require("../backend/routes/student.route");
-const vetRoute = require("../backend/routes/vet.route");
 const customerRoute = require("../backend/routes/customer.route");
 const datesRoute = require("../backend/routes/date.route");
+const vetRoute = require("../backend/routes/vet.route");
 const users = require("../backend/routes/api/users");
 
 // Connecting mongoDB Database
@@ -49,10 +49,12 @@ app.use(
   })
 );
 app.use(cors());
-app.use("/students", studentRoute);
-app.use("/vets", vetRoute);
 
 // Routes
+app.use("/students", studentRoute);
+app.use("/customers", customerRoute);
+app.use('/dates', datesRoute)
+app.use("/vets", vetRoute);
 app.use("/api/users", users);
 
 // 404 Error
@@ -98,4 +100,3 @@ if (env === "production") {
     console.log("Server runing on development on port " + portHttp);
   });
 }
-

@@ -18,7 +18,7 @@ router.route('/customer-create').post((req, res, next) => {
 });
 
 // READ CUSTOMER
-router.route('/custome-get-find').get((req, res) => {
+router.route('/customer-get-find').get((req, res) => {
   customerSchema.find((error, data) => {
     if (error) {
       return next(error)
