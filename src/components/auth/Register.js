@@ -56,13 +56,13 @@ class Register extends Component {
           </h4>
         </div>
         <Form onSubmit={this.onSubmit}>
-          <Form.Group controlId="Name">
+          <Form.Group controlId="name">
             <Form.Label>Nombre</Form.Label>
             <Form.Control
               onChange={this.onChange}
               value={this.state.name}
               error={errors.name}
-              id="name"
+              // id="name"
               type="text"
               className={classnames("", {
                 invalid: errors.name,
@@ -71,13 +71,13 @@ class Register extends Component {
             <span className="red-text">{errors.name}</span>
           </Form.Group>
 
-          <Form.Group controlId="Email">
+          <Form.Group controlId="email">
             <Form.Label>Email</Form.Label>
             <Form.Control
               onChange={this.onChange}
               value={this.state.email}
               error={errors.email}
-              id="email"
+              // id="email"
               type="email"
               className={classnames("", {
                 invalid: errors.email,
@@ -86,13 +86,13 @@ class Register extends Component {
             <span className="red-text">{errors.email}</span>
           </Form.Group>
 
-          <Form.Group controlId="Password">
+          <Form.Group controlId="password">
             <Form.Label>Contraseña</Form.Label>
             <Form.Control
               onChange={this.onChange}
               value={this.state.password}
               error={errors.password}
-              id="password"
+              // id="password"
               type="password"
               className={classnames("", {
                 invalid: errors.password,
@@ -101,13 +101,13 @@ class Register extends Component {
             <span className="red-text">{errors.password}</span>
           </Form.Group>
 
-          <Form.Group controlId="Password">
+          <Form.Group controlId="password2">
             <Form.Label>Confirmar contraseña</Form.Label>
             <Form.Control
               onChange={this.onChange}
               value={this.state.password2}
               error={errors.password2}
-              id="password2"
+              // id="password2"
               type="password"
               className={classnames("", {
                 invalid: errors.password2,

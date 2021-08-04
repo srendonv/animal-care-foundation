@@ -54,13 +54,13 @@ class Login extends Component {
           </h4>
         </div>
         <Form onSubmit={this.onSubmit}>
-          <Form.Group controlId="Email">
+          <Form.Group controlId="email">
             <Form.Label>Email</Form.Label>
             <Form.Control
               onChange={this.onChange}
               value={this.state.email}
               error={errors.email}
-              id="email"
+              // id="email"
               type="email"
               className={classnames("", {
                 invalid: errors.email || errors.emailnotfound,
@@ -72,13 +72,13 @@ class Login extends Component {
             </span>
           </Form.Group>
 
-          <Form.Group controlId="Password">
+          <Form.Group controlId="password">
             <Form.Label>Contraseña</Form.Label>
             <Form.Control
               onChange={this.onChange}
               value={this.state.password}
               error={errors.password}
-              id="password"
+              // id="password"
               type="password"
               className={classnames("", {
                 invalid: errors.password || errors.passwordincorrect,
