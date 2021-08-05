@@ -52,7 +52,7 @@ class Register extends Component {
       <div className="form-wrapper">
         <div>
           <h4>
-            <b>Usuario registrado</b>
+            <b>Nuevo usuario</b>
           </h4>
         </div>
         <Form onSubmit={this.onSubmit}>
