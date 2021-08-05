@@ -3,7 +3,7 @@
 # dependencies
 /backend/node_modules
 /backend/cert
-/backend/config/mailer/sent
+/backend/config/mailer/sent/*
 /node_modules
 /.pnp
 .pnp.js
