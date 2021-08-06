@@ -10,6 +10,7 @@ const api = require('../../../src/config/env');
 const { isObject } = require("util");
 const mailUser = api.mailUser;
 const mailPass = api.mailPass;
+const moment = require('moment');
 
 //Create file data.json with JSON table Structure
 let obj = { table: [] };
@@ -48,16 +49,17 @@ const createTrans = () => {
 }
 
 //Funcion de envio de correo
-const sendEmail = async (user) => {
+const sendEmail = async (user, _callback) => {
   
   const transporter = createTrans()    
   const info = await transporter.sendMail({
     from: `"Animal Care Foundation 🐶" <${mailUser}>`, // sender address
     to: `${user.email}`, // list of receivers
-    subject: `Welcome to Animal Care Foundation - ${user.name} ✔`, // Subject line
+    subject: `Agendamiento de Citas - Animal Care Foundation - ${user.name} ✔`, // Subject line
     // text: "Hello world?", // plain text body
-    // html: "We are <b>Animal Care Foundation</b>", // html body
-    html: ejs.render(htmlTemplate), // html body
+    html: `Hola <b>${user.name}</b> <br>Este correo es para recordar tu cita en <b>Animal Care Foundation</b> el próximo <b>${moment(user.fecha).format("MMM Do YYYY")}</b> 
+    a las <b>${user.hora}</b> con las siguientes observaciones: <br> <b>${user.observaciones}<b>`// html body
+    // html: ejs.render(htmlTemplate), // html body
   });
 
     // console.log("Message sent: %s", info.messageId);
@@ -87,6 +89,7 @@ const sendEmail = async (user) => {
           }
           console.log("File data.json for mailer sents is already created!")
           console.log("JSON data is saved!")
+          _callback(); 
         })
        }
       } 
@@ -105,6 +108,10 @@ const sendEmail = async (user) => {
         // createFile(file);
     }
     }); 
+
+     
+    
+    return
    
   // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
 }

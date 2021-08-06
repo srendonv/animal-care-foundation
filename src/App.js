@@ -17,6 +17,7 @@ import StudentList from "./components/student-list.component";
 import Navbar from "./components/Navbar/Navbar"
 import Footer from "./components/pages/Footer/Footer"
 import servicesComponent from "./components/servicesComponent";
+import agregarCitas from "./components/Citas/AgregarCitas";
 
 // import Login from "./components/Login";
 import CustomerCreate from "./components/CustomerCreate";
@@ -34,11 +35,10 @@ function App() {
           <Col md={12}>
             <div className="wrapper">
               <Switch>
-                <Route exact path='/' component={CreateStudent} />                
+                <Route exact path='/' component={agregarCitas} />                
                 <Route path="/create-student" component={CreateStudent} />
                 <Route path="/edit-student/:id" component={EditStudent} />
                 <Route path="/student-list" component={StudentList} />
-                <Route path="/services" component={servicesComponent} />
                 <Route path="/customer-create" component={CustomerCreate} />
               </Switch>
             </div>

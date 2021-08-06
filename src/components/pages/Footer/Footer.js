@@ -109,44 +109,17 @@ const Footer = () => {
                                 <APIManagement size={32} />
                                 </Link>
                                 
-                                <Link
-                                className='social-icon-link'
-                                to='//www.instagram.com/imastereducacion/?hl=es'
-                                target='_blank'
-                                aria-label='Instagram'
-                                >
-                                <FaInstagram />
-                                </Link>
+                                <a href="www.instagram.com/imastereducacion/?hl=es" target="_blank" rel="noreferrer">
+				                <FaInstagram size={25} color="white" /></a>
+                                
+                                <a href="www.youtube.com/channel/UCNz3oP-hmpxwyESng_vp_Wg" target="_blank" rel="noreferrer">
+				                <FaYoutube size={25} color="white" /></a>
 
-                                <Link
-                                className='social-icon-link'
-                                to={
-                                    '//www.youtube.com/channel/UCNz3oP-hmpxwyESng_vp_Wg'
-                                }
-                                target='_blank'
-                                aria-label='Youtube'
-                                >
-                                <FaYoutube />
-                                </Link>
+                                <a href="www.facebook.com/imastereducacion" target="_blank" rel="noreferrer">
+				                <FaFacebook size={25} color="white" /></a>
 
-                                <Link
-                                className='social-icon-link'
-                                to='//www.facebook.com/imastereducacion/'
-                                target='_blank'
-                                aria-label='Facebook'
-                                >
-                                <FaFacebook />
-                                </Link>
-
-                                <Link
-                                className='social-icon-link'
-                                to='//twitter.com/Ministerio_TIC/'
-                                target='_blank'
-                                aria-label='Twitter'
-                                >
-                                <FaTwitter />
-                                </Link>
-
+                                <a href="twitter.com/Ministerio_TIC/" target="_blank" rel="noreferrer">
+				                <FaTwitter size={25} color="white" /></a>
                             </div>
                         </div>
                     </section>                   

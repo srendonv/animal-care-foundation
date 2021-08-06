@@ -7,14 +7,18 @@
     "azure-react-icons": "^0.10.1",
     "bootstrap": "^4.3.1",
     "leaflet": "^1.7.1",
+    "moment": "^2.29.1",
     "nodemailer": "^6.6.3",
-    "react": "^16.9.0",
+    "react": "^16.14.0",
     "react-bootstrap": "^1.6.1",
+    "react-bootstrap-floating-label": "^1.6.0",
+    "react-bootstrap-sweetalert": "^5.2.0",
     "react-dom": "^16.9.0",
     "react-icons": "^4.2.0",
     "react-leaflet": "^3.2.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "^4.0.3"
+    "react-scripts": "^4.0.3",
+    "sweetalert": "^2.1.2"
   },
   "scripts": {
     "start": "react-scripts start",

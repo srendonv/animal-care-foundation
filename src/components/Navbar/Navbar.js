@@ -101,14 +101,14 @@ const Navbar = () => {
                   className='nav-links'
                   onClick={closeMobileMenu}
                 >
-                  Footer
+                  Encuéntranos
                 </Link>
                 </li>
 
               <li className='nav-btn'>
                 {button ? (
                   <Link to='/sign-up' className='btn-link'>
-                    <Button buttonStyle='btn--outline'>REGISTRATE</Button>
+                    <Button buttonStyle='btn--outline'>LOGIN</Button>
                   </Link>
                 ) : (
                   <Link to='/sign-up' className='btn-link'>
@@ -117,7 +117,7 @@ const Navbar = () => {
                       buttonSize='btn--mobile'
                       onClick={closeMobileMenu}
                     >
-                      REGISTRATE
+                      LOGIN
                     </Button>
                   </Link>
                 )}
