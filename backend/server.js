@@ -12,6 +12,8 @@ let env = api.appEnvironment;
 
 // Express Routes
 const studentRoute = require('../backend/routes/student.route')
+const customerRoute = require('../backend/routes/customer.route')
+const datesRoute = require('../backend/routes/date.route')
 const vetRoute = require ('../backend/routes/vet.route')
 
 
@@ -72,7 +74,8 @@ app.use(express.urlencoded({
   extended: true
 }));
 app.use(cors());
-app.use('/students', studentRoute);
+app.use('/students', studentRoute)
+app.use('/dates', datesRoute)
 app.use('/vets', vetRoute);
 
 // 404 Error
