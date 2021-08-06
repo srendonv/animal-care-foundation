@@ -16,6 +16,7 @@ import EditStudent from "./components/edit-student.component";
 import StudentList from "./components/student-list.component";
 import Navbar from "./components/Navbar/Navbar"
 import Footer from "./components/pages/Footer/Footer"
+import servicesComponent from "./components/servicesComponent";
 
 function App() {
   return (
@@ -25,24 +26,24 @@ function App() {
           <Navbar />
         </header>
 
-        <Container>
-          <Row>
-            <Col md={12}>
-              <div className="wrapper">
-                <Switch>
-                  <Route exact path='/' component={CreateStudent} />                
-                  <Route path="/create-student" component={CreateStudent} />
-                  <Route path="/edit-student/:id" component={EditStudent} />
-                  <Route path="/student-list" component={StudentList} />                
-                </Switch>
-              </div>
-            </Col>
-          </Row>
-        </Container>  
-        
-        <Footer />
-      </div>
-    </Router>
-  );
+      <Container>
+        <Row>
+          <Col md={12}>
+            <div className="wrapper">
+              <Switch>
+                <Route exact path='/' component={CreateStudent} />                
+                <Route path="/create-student" component={CreateStudent} />
+                <Route path="/edit-student/:id" component={EditStudent} />
+                <Route path="/student-list" component={StudentList} />
+                <Route path="/services" component={servicesComponent} />
+              </Switch>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+      
+      <Footer />     
+    </div>
+  </Router>);
 }
 export default App;
