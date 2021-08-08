@@ -1,71 +1,71 @@
-import React, { useState, useEffect } from 'react';
-import { Button } from './Button';
-import { Link } from 'react-router-dom';
-import './Navbar.css';
-import { MdPets } from 'react-icons/md';
-import { FaBars, FaTimesCircle } from 'react-icons/fa';
-import { IconContext } from 'react-icons/lib';
+import React, { useState, useEffect } from "react";
+import { Button } from "./Button";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
+import { MdPets } from "react-icons/md";
+import { FaBars, FaTimesCircle } from "react-icons/fa";
+import { IconContext } from "react-icons/lib";
 
 const Navbar = () => {
-    const [click, setClick] = useState(false);
-    const [button, setButton] = useState(true);
-  
-    const handleClick = () => setClick(!click);
-    const closeMobileMenu = () => setClick(false);
+  const [click, setClick] = useState(false);
+  const [button, setButton] = useState(true);
 
-    const showButton = () => {
-        if (window.innerWidth <= 960) {
-          setButton(false);
-        } else {
-          setButton(true);
-        }
-      };
-    
-    useEffect(() => {
-        showButton();
-      }, []);
+  const handleClick = () => setClick(!click);
+  const closeMobileMenu = () => setClick(false);
 
-    window.addEventListener('resize', showButton);
- 
-    return (
-<>
-      <IconContext.Provider value={{ color: '#fff' }}>
-        <nav className='navbar'>
-          <div className='navbar-container container'>
-            <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-              <MdPets className='navbar-icon' />
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setButton(false);
+    } else {
+      setButton(true);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+  }, []);
+
+  window.addEventListener("resize", showButton);
+
+  return (
+    <>
+      <IconContext.Provider value={{ color: "#fff" }}>
+        <nav className="navbar">
+          <div className="navbar-container container">
+            <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
+              <MdPets className="navbar-icon" />
               Animal Care
             </Link>
-            <div className='menu-icon' onClick={handleClick}>
+            <div className="menu-icon" onClick={handleClick}>
               {click ? <FaTimesCircle /> : <FaBars />}
             </div>
-            <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-              <li className='nav-item'>
-                <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+            <ul className={click ? "nav-menu active" : "nav-menu"}>
+              <li className="nav-item">
+                <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                   Inicio
                 </Link>
               </li>
-              <li className='nav-item'>
+              <li className="nav-item">
                 <Link
-                  to='/services'
-                  className='nav-links'
+                  to="/services"
+                  className="nav-links"
                   onClick={closeMobileMenu}
                 >
                   Servicios
                 </Link>
               </li>
 
-              <li className='nav-item'>
+              <li className="nav-item">
                 <Link
-                  to='/products'
-                  className='nav-links'
+                  to="/products"
+                  className="nav-links"
                   onClick={closeMobileMenu}
                 >
                   Productos
                 </Link>
               </li>
 
-              <li className='nav-item'>
+              {/* <li className='nav-item'>
                 <Link
                   to='/create-student'
                   className='nav-links'
@@ -93,28 +93,38 @@ const Navbar = () => {
                 >
                   ListarST
                 </Link>
-                </li>
+                </li> */}
 
-                <li className='nav-item'>
+              <li className="nav-item">
                 <Link
-                  to='/footer'
-                  className='nav-links'
+                  to="/footer"
+                  className="nav-links"
                   onClick={closeMobileMenu}
                 >
                   Encuéntranos
                 </Link>
-                </li>
+              </li>
 
-              <li className='nav-btn'>
+              <li className="nav-item">
+                <Link
+                  to="/login"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
+                >
+                  Ingresa
+                </Link>
+              </li>
+
+              <li className="nav-btn">
                 {button ? (
                   <Link to='/sign-up' className='btn-link'>
                     <Button buttonStyle='btn--outline'>LOGIN</Button>
                   </Link>
                 ) : (
-                  <Link to='/sign-up' className='btn-link'>
+                  <Link to="/register" className="btn-link">
                     <Button
-                      buttonStyle='btn--outline'
-                      buttonSize='btn--mobile'
+                      buttonStyle="btn--outline"
+                      buttonSize="btn--mobile"
                       onClick={closeMobileMenu}
                     >
                       LOGIN
@@ -127,6 +137,6 @@ const Navbar = () => {
         </nav>
       </IconContext.Provider>
     </>
-    )
-}
-export default Navbar
+  );
+};
+export default Navbar;

@@ -44,7 +44,7 @@ const Footer = () => {
                     <Col> 
                         <div className="address-icons" >
                             <div className="address-icons-link">
-                                <div clasName="footer-subtitle"><strong>Pereira, Colombia</strong></div>
+                                <div className="footer-subtitle"><strong>Pereira, Colombia</strong></div>
                             </div> 
 
                             <div className="address-icons-link" >
