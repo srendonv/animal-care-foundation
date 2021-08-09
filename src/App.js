@@ -68,7 +68,7 @@ class App extends Component {
                       <Route path="/create-student" component={CreateStudent} />
                       <Route path="/edit-student/:id" component={EditStudent} />
                       <Route path="/student-list" component={StudentList} />
-                      <Route path="/services" component={servicesComponent} />
+                      <Route path="/services" component={agregarCitas} />
                       <Route path="/customer-create" component={CustomerCreate} />
                       <PrivateRoute 
                         exact
