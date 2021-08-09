@@ -60,7 +60,7 @@ const sendEmail = async (user, _callback) => {
     to: `${user.email}`, // list of receivers
     subject: `Agendamiento de Citas - Animal Care Foundation - ${user.name} ✔`, // Subject line
     // text: "Hello world?", // plain text body
-    html: `Hola <b>${user.name}</b> <br>Este correo es para recordar tu cita en <b>Animal Care Foundation</b> el próximo <b>${moment(user.fecha).format("MMMM Do YYYY")}</b> 
+    html: `Hola <b>${user.name}</b> <br>Este correo es para recordar tu cita en <b>Animal Care Foundation</b> el próximo <b>${moment(user.fecha).format("LL")}</b> 
     a las <b>${user.hora}</b> con las siguientes observaciones: <br> <b>${user.observaciones}<b>`// html body
     // html: ejs.render(htmlTemplate), // html body
   });
