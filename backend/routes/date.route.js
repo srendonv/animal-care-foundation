@@ -41,8 +41,8 @@ router.route('/date-create').post((req, res, next) => {
   }})
 });
 
-// READ date
-router.route('/date-get-find').get((req, res) => {
+// READ dates
+router.route('/').get((req, res, next) => {
   dateSchema.find((error, data) => {
     if (error) {
       return next(error)
@@ -53,7 +53,7 @@ router.route('/date-get-find').get((req, res) => {
 })
 
 // GET SINGLE date
-router.route('/date-get-id/:id').get((req, res) => {
+router.route('/date-get-id/:id').get((req, res, next) => {
   dateSchema.findById(req.params.id, (error, data) => {
     if (error) {
       return next(error)
@@ -71,7 +71,7 @@ router.route('/date-update/:id').put((req, res, next) => {
   }, (error, data) => {
     if (error) {
       return next(error);
-      console.log(error)
+
     } else {
       res.json(data)
       console.log('date updated successfully !')

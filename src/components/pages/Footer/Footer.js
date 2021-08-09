@@ -1,21 +1,28 @@
-import React, { useState, useRef, useMemo, useCallback } from 'react';
+import React from 'react';
+// eslint-disable-next-line
+import { useState, useRef, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 import './Footer.css';
-import { MapContainer, TileLayer, Marker, Popup, LayerGroup, Circle, FeatureGroup, Rectangle } from 'react-leaflet';
+import { MapContainer, TileLayer,Popup, Circle, FeatureGroup} from 'react-leaflet';
+// eslint-disable-next-line
+import { Marker, LayerGroup, Rectangle } from 'react-leaflet';
 import { FaInstagram, FaYoutube, FaTwitter, FaFacebook, FaPhoneAlt } from 'react-icons/fa';
 import { MdPets, MdMail } from 'react-icons/md';
 import { ImHome3, ImWhatsapp } from 'react-icons/im';
 import {APIManagement} from 'azure-react-icons';
+// eslint-disable-next-line
 import {  iconMap  } from './Icons';
 
 const center = [4.7944704, -75.6858978]
 // const position = [37.4219317, -122.0847472]
 const fillBlueOptions = { fillColor: 'blue' }
 const fillRedOptions = { color: 'red' }
+// eslint-disable-next-line
 const greenOptions = { color: 'green', fillColor: 'green' }
+// eslint-disable-next-line
 const purpleOptions = { color: 'purple' }
   
 

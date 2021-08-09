@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
-// import axios from 'axios';
+import axios from 'axios';
+import {backHost} from '../config/env';
 
 export default class CustomerCreate extends Component {
 
@@ -71,8 +72,8 @@ export default class CustomerCreate extends Component {
       email: this.state.email,
     };
 
-    // axios.post('http://localhost:4000/students/create-student', studentObject)
-    //   .then(res => console.log(res.data));
+    axios.post(`${backHost}/customers/customer-create`, customerObject)
+    .then(res => console.log(res.data));
 
     this.setState({
       name: "",

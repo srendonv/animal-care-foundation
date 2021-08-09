@@ -54,7 +54,7 @@ app.use(cors());
 // Routes
 app.use("/students", studentRoute);
 app.use("/customers", customerRoute);
-app.use('/dates', datesRoute)
+app.use("/dates", datesRoute)
 app.use("/vets", vetRoute);
 app.use("/api/users", users);
 

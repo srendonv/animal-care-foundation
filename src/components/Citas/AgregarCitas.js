@@ -123,7 +123,7 @@ export default class AgregarCitas extends Component {
                                     autoComplete="off"
                                     value={this.state.fecha}
                                     onChange={this.onChangeFecha}
-                                    class="form-control">
+                                    className="form-control">
                                 </input>
                             </Form.Group> 
                         </Row>
@@ -141,7 +141,7 @@ export default class AgregarCitas extends Component {
                                     required
                                     value={this.state.hora}
                                     onChange={this.onChangeHora}
-                                    class="form-control">
+                                    className="form-control">
                                 </input>
                                 </div>
                                 <Form.Text className="text-muted">

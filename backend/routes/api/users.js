@@ -92,4 +92,20 @@ router.post("/login", (req, res) => {
   });
 });
 
+// READ users
+router.route('/').get((req, res, next) => {
+  User.find((error, data) => {
+    if (error) {
+      return next(error)
+    } else {
+      // res.json(data)
+      res.status(200).json({
+        "message": "Welcome to the API USERS route. Ready to READ users!",
+        "users": data
+      })
+    }
+  })
+
+})
+
 module.exports = router
