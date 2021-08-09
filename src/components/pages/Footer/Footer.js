@@ -29,7 +29,7 @@ const purpleOptions = { color: 'purple' }
 const Footer = () => {
     return (  
         
-        <div className="footer-container">         
+        <div id="footer" className="footer-container">         
             <Container fluid="md">
                 <Row>
                     <Col>

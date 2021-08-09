@@ -5,6 +5,7 @@ import "./Navbar.css";
 import { MdPets } from "react-icons/md";
 import { FaBars, FaTimesCircle } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+import { Link as ScrollLink } from "react-scroll";
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -93,7 +94,7 @@ const Navbar = () => {
                 >
                   ListarST
                 </Link>
-                </li> */}
+                </li> 
 
               <li className="nav-item">
                 <Link
@@ -103,6 +104,20 @@ const Navbar = () => {
                 >
                   Encuéntranos
                 </Link>
+              </li>*/}
+
+              <li className="nav-item">
+                <ScrollLink
+                  activeClass="active"
+                  to="footer"
+                  smooth={true}
+                  duration = {1000}
+                  spy = {true}
+                  offset ={10}
+                  onClick={closeMobileMenu}
+                >
+                  Encuéntranos
+                </ScrollLink>
               </li>
               
               <li className="nav-btn">

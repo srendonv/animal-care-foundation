@@ -24,6 +24,7 @@ import servicesComponent from "./components/servicesComponent";
 // import Login from "./components/Login";
 import CustomerCreate from "./components/CustomerCreate";
 import Footer from "./components/pages/Footer/Footer";
+import Home from "./components/pages/Home/Home";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
@@ -64,7 +65,7 @@ class App extends Component {
                     <Route exact path="/register" component={Register} />
                     <Route exact path="/login" component={Login} />
                     <Switch>
-                      <Route exact path="/" component={agregarCitas} />
+                      <Route exact path="/" component={Home} />
                       <Route path="/create-student" component={CreateStudent} />
                       <Route path="/edit-student/:id" component={EditStudent} />
                       <Route path="/student-list" component={StudentList} />
