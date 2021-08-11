@@ -5,21 +5,49 @@
   "dependencies": {
     "axios": "^0.21.1",
     "azure-react-icons": "^0.10.1",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
+    "classnames": "^2.3.1",
+    "concurrently": "^6.2.0",
+    "express": "^4.17.1",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^3.1.2",
     "leaflet": "^1.7.1",
-    "react": "^16.9.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.13.5",
+    "nodemailer": "^6.6.3",
+    "passport": "^0.4.1",
+    "passport-jwt": "^4.0.0",
+    "react": "^16.14.0",
+    "react-alice-carousel": "^2.5.1",
     "react-bootstrap": "^1.6.1",
+    "react-bootstrap-floating-label": "^1.6.0",
+    "react-bootstrap-sweetalert": "^5.2.0",
     "react-dom": "^16.9.0",
     "react-icons": "^4.2.0",
     "react-leaflet": "^3.2.0",
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "^4.0.3"
+    "react-redux": "^7.2.4",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^4.0.3",
+    "react-scroll": "^1.8.3",
+    "react-simple-image-slider": "^2.1.2",
+    "react-slideshow-image": "^3.5.0",
+    "redux": "^4.1.0",
+    "redux-devtools-extension": "^2.13.9",
+    "redux-thunk": "^2.3.0",
+    "sweetalert": "^2.1.2",
+    "validator": "^13.6.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "npm start --prefix backend",
+    "client": "npm start",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -28,5 +56,8 @@
     ">0.2%",
     "not dead",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  }
 }

@@ -45,7 +45,7 @@ export default class CreateStudent extends Component {
       rollno: this.state.rollno
     };
 
-    
+
     axios.post(`${backHost}/students/create-student`, studentObject)
       .then(res => console.log(res.data));
 
@@ -58,30 +58,40 @@ export default class CreateStudent extends Component {
 
   render() {
     return (
-      <div className="component-container">    
+      <div className="component-container"> 
         <div className="form-wrapper">
           <Form onSubmit={this.onSubmit}>
             <Form.Group controlId="Name">
               <Form.Label>Name</Form.Label>
-              <Form.Control type="text" value={this.state.name} onChange={this.onChangeStudentName} />
+              <Form.Control
+                type="text"
+                value={this.state.name}
+                onChange={this.onChangeStudentName} />
             </Form.Group>
 
             <Form.Group controlId="Email">
               <Form.Label>Email</Form.Label>
-              <Form.Control type="email" value={this.state.email} onChange={this.onChangeStudentEmail} />
+              <Form.Control
+                type="email"
+                value={this.state.email}
+                onChange={this.onChangeStudentEmail} />
             </Form.Group>
 
             <Form.Group controlId="Name">
               <Form.Label>Roll No</Form.Label>
-              <Form.Control type="text" value={this.state.rollno} onChange={this.onChangeStudentRollno} />
+              <Form.Control
+                type="text"
+                value={this.state.rollno}
+                onChange={this.onChangeStudentRollno} />
             </Form.Group>
 
-            {/* <Button variant="danger" size="lg" block="block" type="submit"> */}
-            <Button variant="dark" size="lg" block="block" type="submit">
-              Create Student
-            </Button>
-          </Form>
-        </div>
-      </div>);
+                {/* <Button variant="danger" size="lg" block="block" type="submit"> */}
+                <Button variant="dark" size="lg" block="block" type="submit">
+                  Create Student
+                </Button>
+              </Form>
+            </div>
+          </div>
+      );
   }
 }

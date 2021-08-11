@@ -1,5 +1,9 @@
 let express = require('express'),
 router = express.Router();
+const mailer = require("./../config/mailer/mailer")
+let path = require("path");
+let fs = require("fs");
+let mailer_filepath = path.resolve(__dirname,"./../config/mailer/sent/data.json"); 
 
 
 // date MODEL
@@ -7,18 +11,38 @@ let dateSchema = require('../models/Date');
 
 // CREATE date
 router.route('/date-create').post((req, res, next) => {
-  dateSchema.create(req.body, (error, data) => {
+  dateSchema.create(req.body, (error, data_schema) => {
     if (error) {
       return next(error)
     } else {
-      console.log(data)
-      res.json(data)
-    }
-  })
+      // console.log(data)
+      // res.json(data)
+
+     mailer.sendEmail(data_schema, ()=>{
+        fs.readFile(mailer_filepath,(err , data_mailer) => {
+          if(err){
+            console.log(err);
+          } else{  
+            let response_mailer = JSON.parse(data_mailer);
+
+            console.log("data_schema: " + data_schema);
+            console.log("response_mailer: " + JSON.stringify(response_mailer)) 
+            // res.json(data_schema);          
+
+            res.status(200).json({
+              "database": data_schema,
+              "mailer": response_mailer
+            })         
+
+          }
+          } )           
+
+    })
+  }})
 });
 
-// READ date
-router.route('/date-get-find').get((req, res) => {
+// READ dates
+router.route('/').get((req, res, next) => {
   dateSchema.find((error, data) => {
     if (error) {
       return next(error)
@@ -29,7 +53,7 @@ router.route('/date-get-find').get((req, res) => {
 })
 
 // GET SINGLE date
-router.route('/date-get-id/:id').get((req, res) => {
+router.route('/date-get-id/:id').get((req, res, next) => {
   dateSchema.findById(req.params.id, (error, data) => {
     if (error) {
       return next(error)
@@ -47,7 +71,7 @@ router.route('/date-update/:id').put((req, res, next) => {
   }, (error, data) => {
     if (error) {
       return next(error);
-      console.log(error)
+
     } else {
       res.json(data)
       console.log('date updated successfully !')

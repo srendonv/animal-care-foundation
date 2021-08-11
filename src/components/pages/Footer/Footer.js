@@ -1,28 +1,35 @@
-import React, { useState, useRef, useMemo, useCallback } from 'react';
+import React from 'react';
+// eslint-disable-next-line
+import { useState, useRef, useMemo, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col'
 import './Footer.css';
-import { MapContainer, TileLayer, Marker, Popup, LayerGroup, Circle, FeatureGroup, Rectangle } from 'react-leaflet';
+import { MapContainer, TileLayer,Popup, Circle, FeatureGroup} from 'react-leaflet';
+// eslint-disable-next-line
+import { Marker, LayerGroup, Rectangle } from 'react-leaflet';
 import { FaInstagram, FaYoutube, FaTwitter, FaFacebook, FaPhoneAlt } from 'react-icons/fa';
 import { MdPets, MdMail } from 'react-icons/md';
 import { ImHome3, ImWhatsapp } from 'react-icons/im';
 import {APIManagement} from 'azure-react-icons';
+// eslint-disable-next-line
 import {  iconMap  } from './Icons';
 
 const center = [4.7944704, -75.6858978]
 // const position = [37.4219317, -122.0847472]
 const fillBlueOptions = { fillColor: 'blue' }
 const fillRedOptions = { color: 'red' }
+// eslint-disable-next-line
 const greenOptions = { color: 'green', fillColor: 'green' }
+// eslint-disable-next-line
 const purpleOptions = { color: 'purple' }
   
 
 const Footer = () => {
     return (  
         
-        <div className="footer-container">         
+        <div id="footer" className="footer-container">         
             <Container fluid="md">
                 <Row>
                     <Col>
@@ -44,7 +51,7 @@ const Footer = () => {
                     <Col> 
                         <div className="address-icons" >
                             <div className="address-icons-link">
-                                <div clasName="footer-subtitle"><strong>Pereira, Colombia</strong></div>
+                                <div className="footer-subtitle"><strong>Pereira, Colombia</strong></div>
                             </div> 
 
                             <div className="address-icons-link" >
@@ -109,44 +116,17 @@ const Footer = () => {
                                 <APIManagement size={32} />
                                 </Link>
                                 
-                                <Link
-                                className='social-icon-link'
-                                to='//www.instagram.com/imastereducacion/?hl=es'
-                                target='_blank'
-                                aria-label='Instagram'
-                                >
-                                <FaInstagram />
-                                </Link>
+                                <a href="www.instagram.com/imastereducacion/?hl=es" target="_blank" rel="noreferrer">
+				                <FaInstagram size={25} color="white" /></a>
+                                
+                                <a href="www.youtube.com/channel/UCNz3oP-hmpxwyESng_vp_Wg" target="_blank" rel="noreferrer">
+				                <FaYoutube size={25} color="white" /></a>
 
-                                <Link
-                                className='social-icon-link'
-                                to={
-                                    '//www.youtube.com/channel/UCNz3oP-hmpxwyESng_vp_Wg'
-                                }
-                                target='_blank'
-                                aria-label='Youtube'
-                                >
-                                <FaYoutube />
-                                </Link>
+                                <a href="www.facebook.com/imastereducacion" target="_blank" rel="noreferrer">
+				                <FaFacebook size={25} color="white" /></a>
 
-                                <Link
-                                className='social-icon-link'
-                                to='//www.facebook.com/imastereducacion/'
-                                target='_blank'
-                                aria-label='Facebook'
-                                >
-                                <FaFacebook />
-                                </Link>
-
-                                <Link
-                                className='social-icon-link'
-                                to='//twitter.com/Ministerio_TIC/'
-                                target='_blank'
-                                aria-label='Twitter'
-                                >
-                                <FaTwitter />
-                                </Link>
-
+                                <a href="twitter.com/Ministerio_TIC/" target="_blank" rel="noreferrer">
+				                <FaTwitter size={25} color="white" /></a>
                             </div>
                         </div>
                     </section>                   

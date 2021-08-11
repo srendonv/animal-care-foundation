@@ -2,19 +2,19 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 let dateSchema= new Schema({
-  datetime: {
-    type: Date
-  },
-  customer_id: {
+  name: {
     type: String
   },
-  pet_id: {
+  email: {
     type: String
   },
-  vet_id: {
+  fecha: {
     type: String
   },
-  description: {
+  hora: {
+    type: String
+  },
+  observaciones: {
     type: String
   }
 }, {

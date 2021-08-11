@@ -11,3 +11,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#formulario{
+  background-color: #130468ec ;
+}
+
+.citas-container {
+  background-color: #fff;
+  padding: 1rem 0 1rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align:center;
+}
+
+.div-center {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.form-wrapper { 
+  margin: 1px 1px 0 1px; 
+  padding: 10px; 
+}
