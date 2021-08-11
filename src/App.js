@@ -24,7 +24,7 @@ import Navbar from "./components/pages/header/navbar/Navbar";
 import servicesComponent from "./components/utils/ServicesComponent";
 // import Login from "./components/Login";
 import CustomerCreate from "./components/utils/CustomerCreate";
-import Footer from "./components/pages/footer/Footer";
+import Footer from "./components/pages/footer_page/Footer";
 import Home from "./components/pages/home/Home";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
