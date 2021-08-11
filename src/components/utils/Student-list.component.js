@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from 'axios';
 import Table from 'react-bootstrap/Table';
 import StudentTableRow from './StudentTableRow';
-import {backHost} from '../config/env';
+import {backHost} from '../../config/env';
 
 export default class StudentList extends Component {
 

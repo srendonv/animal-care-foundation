@@ -15,16 +15,17 @@ import { HashRouter as Router, Switch, Route} from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 
-import CreateStudent from "./components/CreateStudent/create-student.component";
-import EditStudent from "./components/edit-student.component";
-import StudentList from "./components/student-list.component";
-import agregarCitas from "./components/Citas/AgregarCitas";
-import Navbar from "./components/Navbar/Navbar";
-import servicesComponent from "./components/servicesComponent";
+import CreateStudent from "./components/utils/createStudent/Create-student.component";
+import EditStudent from "./components/utils/Edit-student.component";
+import StudentList from "./components/utils/Student-list.component";
+import AgregarCitas from "./components/pages/services/agregarCitas/AgregarCitas";
+import Navbar from "./components/pages/header/navbar/Navbar";
+// eslint-disable-next-line
+import servicesComponent from "./components/utils/ServicesComponent";
 // import Login from "./components/Login";
-import CustomerCreate from "./components/CustomerCreate";
-import Footer from "./components/pages/Footer/Footer";
-import Home from "./components/pages/Home/Home";
+import CustomerCreate from "./components/utils/CustomerCreate";
+import Footer from "./components/pages/footer/Footer";
+import Home from "./components/pages/home/Home";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
@@ -69,7 +70,7 @@ class App extends Component {
                       <Route path="/create-student" component={CreateStudent} />
                       <Route path="/edit-student/:id" component={EditStudent} />
                       <Route path="/student-list" component={StudentList} />
-                      <Route path="/services" component={agregarCitas} />
+                      <Route path="/services" component={AgregarCitas} />
                       <Route path="/customer-create" component={CustomerCreate} />
                       <PrivateRoute 
                         exact
@@ -80,7 +81,7 @@ class App extends Component {
                   </div>
                 </Col>
               </Row>
-            </Container>
+            </Container>  
             <Footer />
           </div>
         </Router>

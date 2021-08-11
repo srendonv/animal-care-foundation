@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import Button from 'react-bootstrap/Button';
-import {backHost} from '../config/env';
+import {backHost} from '../../config/env';
 
 export default class StudentTableRow extends Component {
 

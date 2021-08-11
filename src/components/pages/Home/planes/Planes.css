@@ -1,0 +1,12 @@
+.planes-container {
+    background-color: #fff;
+    padding: 2rem 0 2rem 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+  .planes-container h1 {
+    color: #000;
+    padding: 20px;
+  }

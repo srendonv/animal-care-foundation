@@ -40,7 +40,7 @@ const Footer = () => {
                         target='_self'
                         aria-label='Footer'
                         >
-                    <div className="footer-title"><strong>Encuéntranos</strong></div>
+                    <h1 className="display-5 text-center"><strong>Encuéntranos</strong></h1>
                     </Link>
                     
                     </Col>
@@ -69,8 +69,7 @@ const Footer = () => {
                             <div className="address-icons-link" >
                                 <ImWhatsapp className='navbar-icon' /> 
                                 <a href="tel:+573014733020">+57 3014733020</a>
-                            </div>                                         
-
+                            </div>  
                         </div>
                     </Col>
 
@@ -104,28 +103,20 @@ const Footer = () => {
                                 </Link>
                             </div>
                             <div className='website-rights'>Animal Care © 2021</div>
-                            <div className='social-icons'>
-                                <Link
-                                className='social-icon-link'
-                                to={
-                                    '//dev.azure.com/srendonv/AnimalCareFoundation/'
-                                }
-                                target='_blank'
-                                aria-label='Azure'
-                                >
-                                <APIManagement size={32} />
-                                </Link>
+                            <div className='social-icons'> 
+                                <a href="https://www.dev.azure.com/srendonv/AnimalCareFoundation/" target="_blank" rel="noreferrer">
+				                <APIManagement size={32} color="white" /></a>
                                 
-                                <a href="www.instagram.com/imastereducacion/?hl=es" target="_blank" rel="noreferrer">
+                                <a href="https://www.instagram.com/imastereducacion/?hl=es" target="_blank" rel="noreferrer">
 				                <FaInstagram size={25} color="white" /></a>
                                 
-                                <a href="www.youtube.com/channel/UCNz3oP-hmpxwyESng_vp_Wg" target="_blank" rel="noreferrer">
+                                <a href="https://www.youtube.com/channel/UCNz3oP-hmpxwyESng_vp_Wg" target="_blank" rel="noreferrer">
 				                <FaYoutube size={25} color="white" /></a>
 
-                                <a href="www.facebook.com/imastereducacion" target="_blank" rel="noreferrer">
+                                <a href="https://www.facebook.com/imastereducacion" target="_blank" rel="noreferrer">
 				                <FaFacebook size={25} color="white" /></a>
 
-                                <a href="twitter.com/Ministerio_TIC/" target="_blank" rel="noreferrer">
+                                <a href="https://www.twitter.com/Ministerio_TIC/" target="_blank" rel="noreferrer">
 				                <FaTwitter size={25} color="white" /></a>
                             </div>
                         </div>

@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
 import "./CreateStudent.css"
-import {backHost} from '../../config/env';
+import {backHost} from '../../../config/env';
 
 export default class CreateStudent extends Component {
 

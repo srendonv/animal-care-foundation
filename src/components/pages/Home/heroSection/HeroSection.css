@@ -1,0 +1,40 @@
+.hero-container{
+  background-color: #fff;
+  padding: 1rem 0 1rem 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-end;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  }
+
+.hero-title{
+   color: #fff;
+   font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif; 
+    font-style: normal; 
+    font-variant: normal; 
+    
+  }
+
+  .hero-subtitle{
+    color: #fff;
+    font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif; 
+    font-style: normal; 
+    font-variant: normal;
+       
+   }
+ 
+
+
+  .carousel .carousel-item {
+    height: 500px;
+  }
+  
+  .carousel-item img {
+      position: absolute;
+      object-fit:cover;
+      top: 0;
+      left: 0;
+      min-height: 500px;
+  }
