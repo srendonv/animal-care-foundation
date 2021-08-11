@@ -2,7 +2,8 @@
 
 # dependencies
 /backend/node_modules
-/backend/cert
+/backend/cert/*.pem
+/backend/config/mailer/sent/*.json
 /node_modules
 /.pnp
 .pnp.js
@@ -17,7 +18,9 @@
 .DS_Store
 .env
 .env.development
+.env.development.save
 .env.production
+.env.production.save
 .env.local
 .env.development.local
 .env.test.local
