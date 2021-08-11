@@ -18,14 +18,14 @@ import store from "./store";
 import CreateStudent from "./components/utils/createStudent/Create-student.component";
 import EditStudent from "./components/utils/Edit-student.component";
 import StudentList from "./components/utils/Student-list.component";
-import AgregarCitas from "./components/pages/services/agregarCitas/AgregarCitas";
-import Navbar from "./components/pages/header/navbar/Navbar";
+import AgregarCitas from "./components/pages/servicesPage/agregarCitas/AgregarCitas";
+import Navbar from "./components/pages/headerPage/navbar/Navbar";
 // eslint-disable-next-line
 import servicesComponent from "./components/utils/ServicesComponent";
 // import Login from "./components/Login";
 import CustomerCreate from "./components/utils/CustomerCreate";
-import Footer from "./components/pages/footer/Footer";
-import Home from "./components/pages/home/Home";
+import Footer from "./components/pages/footerPage/Footer";
+import Home from "./components/pages/homePage/Home";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";

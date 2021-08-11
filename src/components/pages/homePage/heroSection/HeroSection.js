@@ -16,7 +16,7 @@ const HeroSection = () => {
                             <Carousel.Item interval={3500}>
                                 <img
                                 className="d-block w-100"
-                                src = {'assets/img/img1.jpg'}
+                                src = {'assets/img/face/img1.jpg'}
                                 alt="First slide"
                                 />
                                 <Carousel.Caption>
@@ -36,7 +36,7 @@ const HeroSection = () => {
                             <Carousel.Item interval={3500}>
                                 <img
                                 className="d-block w-100"
-                                src={'assets/img/img2.jpg'}
+                                src={'assets/img/face/img2.jpg'}
                                 alt="Second slide"
                                 />
                                 <Carousel.Caption>
@@ -54,7 +54,7 @@ const HeroSection = () => {
                             <Carousel.Item interval={3500}>
                                 <img
                                 className="d-block w-100"
-                                src={'assets/img/img3.jpg'}
+                                src={'assets/img/face/img3.jpg'}
                                 alt="Third slide"
                                 />
                                 <Carousel.Caption>
@@ -68,6 +68,61 @@ const HeroSection = () => {
                                 </Link>
                                 </Carousel.Caption>
                             </Carousel.Item>
+
+                            <Carousel.Item interval={3500}>
+                                <img
+                                className="d-block w-100"
+                                src={'assets/img/face/img4.jpg'}
+                                alt="Third slide"
+                                />
+                                <Carousel.Caption>
+                                <h1 className="display-4 text-center hero-title">Animal Care Foundation
+                                            </h1>
+                                <p className="hero-subtitle">Todo lo que necesitas en un sólo lugar.</p>
+                                <Link to="/services">
+                                    <Button type="submit" size="lg">
+                                        PIDE UNA CITA!
+                                    </Button>
+                                </Link>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+
+                            <Carousel.Item interval={3500}>
+                                <img
+                                className="d-block w-100"
+                                src={'assets/img/face/img5.jpg'}
+                                alt="Third slide"
+                                />
+                                <Carousel.Caption>
+                                <h1 className="display-4 text-center hero-title">Animal Care Foundation
+                                            </h1>
+                                <p className="hero-subtitle">Todo lo que necesitas en un sólo lugar.</p>
+                                <Link to="/services">
+                                    <Button type="submit" size="lg">
+                                        PIDE UNA CITA!
+                                    </Button>
+                                </Link>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+
+                            <Carousel.Item interval={3500}>
+                                <img
+                                className="d-block w-100"
+                                src={'assets/img/face/img6.jpg'}
+                                alt="Third slide"
+                                />
+                                <Carousel.Caption>
+                                <h1 className="display-4 text-center hero-title">Animal Care Foundation
+                                            </h1>
+                                <p className="hero-subtitle">Todo lo que necesitas en un sólo lugar.</p>
+                                <Link to="/services">
+                                    <Button type="submit" size="lg">
+                                        PIDE UNA CITA!
+                                    </Button>
+                                </Link>
+                                </Carousel.Caption>
+                            </Carousel.Item>
+
                         </Carousel>            
                     
                 </Col>   
