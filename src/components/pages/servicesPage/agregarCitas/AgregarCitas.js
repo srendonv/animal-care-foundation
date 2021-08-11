@@ -3,9 +3,9 @@ import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Button from 'react-bootstrap/Button';
-import '../../assets/css/index.css';
+import './AgregarCitas.css';
 import axios from 'axios';
-import {backHost} from '../../config/env';
+import {backHost} from '../../../../config/env';
 import swal from 'sweetalert';
 
 export default class AgregarCitas extends Component {

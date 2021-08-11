@@ -4,9 +4,9 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { loginUser } from "../../actions/authActions";
 import classnames from "classnames";
-
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import "./Auth.css"
 
 class Login extends Component {
   constructor() {
@@ -47,7 +47,7 @@ class Login extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div className="form-wrapper">
+      <div className="form-wrapper auth-container">
         <div>
           <h4>
             <b>Usuario registrado</b>

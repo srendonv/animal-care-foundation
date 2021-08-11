@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import AgregarCitas from '../components/Citas/AgregarCitas'
-import ListarCitas from '../components/ListarCitas'
+import AgregarCitas from '../../pages/servicesPage/agregarCitas/AgregarCitas'
+import ListarCitas from '../ListarCitas'
 
 export class CitasApp extends Component {
     render() {

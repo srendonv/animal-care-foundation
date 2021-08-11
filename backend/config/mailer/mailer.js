@@ -12,6 +12,9 @@ const mailUser = api.mailUser;
 const mailPass = api.mailPass;
 const moment = require('moment');
 
+//Setting to spanish the language of date
+moment.locale('es');
+
 //Create file data.json with JSON table Structure
 let obj = { table: [] };
 let data_parsed = JSON.stringify(obj, null, 2);
@@ -57,10 +60,12 @@ const sendEmail = async (user, _callback) => {
     to: `${user.email}`, // list of receivers
     subject: `Agendamiento de Citas - Animal Care Foundation - ${user.name} ✔`, // Subject line
     // text: "Hello world?", // plain text body
-    html: `Hola <b>${user.name}</b> <br>Este correo es para recordar tu cita en <b>Animal Care Foundation</b> el próximo <b>${moment(user.fecha).format("MMM Do YYYY")}</b> 
-    a las <b>${user.hora}</b> con las siguientes observaciones: <br> <b>${user.observaciones}<b>`// html body
+    html: `Hola <b>${user.name}</b> <br>Este correo es para recordar tu cita en <b>Animal Care Foundation</b> el próximo <b>${moment(user.fecha).format("LL")}</b> 
+    a las <b>${moment(moment(user.hora, 'HH:mm')).format('hh:mm A')}</b> con las siguientes observaciones: <br> <b>${user.observaciones}<b>`// html body
     // html: ejs.render(htmlTemplate), // html body
   });
+
+  
 
     // console.log("Message sent: %s", info.messageId);
    const response = ("Message sent: " + String(info.messageId));

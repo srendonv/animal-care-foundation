@@ -5,6 +5,9 @@ import "./Navbar.css";
 import { MdPets } from "react-icons/md";
 import { FaBars, FaTimesCircle } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+// eslint-disable-next-line
+import { Link as ScrollLink } from "react-scroll";
+import { HashLink } from 'react-router-hash-link'
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -40,11 +43,13 @@ const Navbar = () => {
               {click ? <FaTimesCircle /> : <FaBars />}
             </div>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
+              
               <li className="nav-item">
                 <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                   Inicio
                 </Link>
               </li>
+
               <li className="nav-item">
                 <Link
                   to="/services"
@@ -55,14 +60,34 @@ const Navbar = () => {
                 </Link>
               </li>
 
-              <li className="nav-item">
-                <Link
-                  to="/products"
+               <li className="nav-item">
+                <HashLink
+                  to="/#planes"
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
-                  Productos
-                </Link>
+                  Planes
+                </HashLink>
+              </li>
+
+              <li className="nav-item">
+                <HashLink
+                  to="/#beneficios"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
+                >
+                  Beneficios
+                </HashLink>
+              </li>
+
+              <li className="nav-item">
+                <HashLink
+                  to="/#equipo"
+                  className="nav-links"
+                  onClick={closeMobileMenu}
+                >
+                  Equipo
+                </HashLink>
               </li>
 
               {/* <li className='nav-item'>
@@ -93,30 +118,24 @@ const Navbar = () => {
                 >
                   ListarST
                 </Link>
-                </li> */}
+                </li> 
+              */}
 
               <li className="nav-item">
-                <Link
-                  to="/footer"
+                <HashLink
+                  to="/#footer"
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
                   Encuéntranos
-                </Link>
+                </HashLink>
               </li>
-              <li className="nav-item">
-                <Link
-                  to="/register"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  Regístrate
-                </Link>
-              </li>
+
+              
               <li className="nav-btn">
                 {button ? (
                   <Link to='/login' className='btn-link'>
-                    <Button buttonStyle='btn--outline'>LOGIN</Button>
+                    <Button buttonStyle='btn--outline'>INGRESAR</Button>
                   </Link>
                 ) : (
                   <Link to="/login" className="btn-link">
@@ -125,7 +144,7 @@ const Navbar = () => {
                       buttonSize="btn--mobile"
                       onClick={closeMobileMenu}
                     >
-                      LOGIN
+                      INGRESAR
                     </Button>
                   </Link>
                 )}
