@@ -104,24 +104,22 @@ const Navbar = () => {
                   Encuéntranos
                 </Link>
               </li>
-
               <li className="nav-item">
                 <Link
-                  to="/login"
+                  to="/register"
                   className="nav-links"
                   onClick={closeMobileMenu}
                 >
-                  Ingresa
+                  Regístrate
                 </Link>
               </li>
-
               <li className="nav-btn">
                 {button ? (
-                  <Link to='/sign-up' className='btn-link'>
+                  <Link to='/login' className='btn-link'>
                     <Button buttonStyle='btn--outline'>LOGIN</Button>
                   </Link>
                 ) : (
-                  <Link to="/register" className="btn-link">
+                  <Link to="/login" className="btn-link">
                     <Button
                       buttonStyle="btn--outline"
                       buttonSize="btn--mobile"
