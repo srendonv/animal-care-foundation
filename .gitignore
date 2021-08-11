@@ -2,7 +2,7 @@
 
 # dependencies
 /backend/node_modules
-/backend/cert
+/backend/cert/*.pem
 /backend/config/mailer/sent/*.json
 /node_modules
 /.pnp
