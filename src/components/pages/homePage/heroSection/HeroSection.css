@@ -1,5 +1,5 @@
 .hero-container{
-  background-color: #fff;
+  background-color: #4B4359;
   padding: 1rem 0 1rem 0;
   justify-content: center;
   align-items: center;
@@ -23,6 +23,10 @@
     font-style: normal; 
     font-variant: normal;
        
+   }
+
+   .hero-container img {
+     opacity: 0.5;
    }
  
 
