@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { logoutUser } from "../../actions/authActions";
-import AgregarCitas from './../pages/servicesPage/agregarCitas/AgregarCitas'
+import { logoutUser } from "../../../actions/authActions";
+import AgregarCitas from '../servicesPage/agregarCitas/AgregarCitas'
 
 
 class Dashboard extends Component {

@@ -22,7 +22,7 @@ router.route('/').get((req, res, next) => {
     if (error) {
       return next(error)
     } else {
-      res.json(data)
+      return res.json(data)
     }
   })
 })

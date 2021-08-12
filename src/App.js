@@ -11,7 +11,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./assets/css/App.css";
 
 // import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
-import { HashRouter as Router, Switch, Route} from "react-router-dom";
+import { HashRouter as Router, Switch, Route } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 
@@ -30,7 +30,7 @@ import Home from "./components/pages/homePage/Home";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import PrivateRoute from "./components/private-route/PrivateRoute";
-import Dashboard from "./components/dashboard/Dashboard";
+import Dashboard from "./components/pages/dashboard/Dashboard";
 
 // Check for token to keep user logged in
 if (localStorage.jwtToken) {
@@ -58,15 +58,15 @@ class App extends Component {
         <Router>
           <div className="App">
             <header className="App-header">
-              <Navbar />
+              <Navbar/>
             </header>
             <Container>
               <Row>
                 <Col md={12}>
                   <div className="wrapper">
-                    <Route exact path="/register" component={Register} />
-                    <Route exact path="/login" component={Login} />
                     <Switch>
+                      <Route exact path="/register" component={Register} />
+                      <Route exact path="/login" component={Login} />
                       <Route exact path="/" component={Home} />
                       <Route path="/create-student" component={CreateStudent} />
                       <Route path="/edit-student/:id" component={EditStudent} />
@@ -81,7 +81,7 @@ class App extends Component {
                   </div>
                 </Col>
               </Row>
-            </Container>  
+            </Container>
             <Footer />
           </div>
         </Router>
