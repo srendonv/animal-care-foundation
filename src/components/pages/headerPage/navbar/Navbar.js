@@ -49,17 +49,7 @@ const Navbar = () => {
                   Inicio
                 </Link>
               </li>
-
-              <li className="nav-item">
-                <Link
-                  to="/services"
-                  className="nav-links"
-                  onClick={closeMobileMenu}
-                >
-                  Servicios
-                </Link>
-              </li>
-
+              
                <li className="nav-item">
                 <HashLink
                   to="/#planes"
