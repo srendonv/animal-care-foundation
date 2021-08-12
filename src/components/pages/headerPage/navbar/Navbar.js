@@ -7,11 +7,13 @@ import { FaBars, FaTimesCircle } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 // eslint-disable-next-line
 import { Link as ScrollLink } from "react-scroll";
-import { HashLink } from 'react-router-hash-link'
+import { HashLink } from "react-router-hash-link";
+import { connect } from "react-redux";
 
-const Navbar = () => {
+const Navbar = ({auth}) => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(auth.isAuthenticated);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -30,10 +32,17 @@ const Navbar = () => {
 
   window.addEventListener("resize", showButton);
 
+  console.log(auth);
   return (
     <>
+      Hola {auth.isAuthenticated ? "True" : "False"}
       <IconContext.Provider value={{ color: "#fff" }}>
         <nav className="navbar">
+          <input
+            onChange={(e) => {
+              setIsAuthenticated(e.target.value);
+            }}
+          ></input>
           <div className="navbar-container container">
             <Link to="/" className="navbar-logo" onClick={closeMobileMenu}>
               <MdPets className="navbar-icon" />
@@ -41,9 +50,9 @@ const Navbar = () => {
             </Link>
             <div className="menu-icon" onClick={handleClick}>
               {click ? <FaTimesCircle /> : <FaBars />}
+              {isAuthenticated}
             </div>
             <ul className={click ? "nav-menu active" : "nav-menu"}>
-              
               <li className="nav-item">
                 <Link to="/" className="nav-links" onClick={closeMobileMenu}>
                   Inicio
@@ -60,7 +69,7 @@ const Navbar = () => {
                 </Link>
               </li>
 
-               <li className="nav-item">
+              <li className="nav-item">
                 <HashLink
                   to="/#planes"
                   className="nav-links"
@@ -131,11 +140,21 @@ const Navbar = () => {
                 </HashLink>
               </li>
 
-              
+              {auth.isAuthenticated ? (
+                <Link to="/login" className="btn-link">
+                  <Button buttonStyle="btn--outline">SALIR</Button>
+                  {/* <Button buttonStyle="btn--outline">SALIR</Button> */}
+                </Link>
+              ) : (
+                <Link to="/login" className="btn-link">
+                  <Button buttonStyle="btn--outline">INGRESAR</Button>
+                </Link>
+              )}
+
               <li className="nav-btn">
                 {button ? (
-                  <Link to='/login' className='btn-link'>
-                    <Button buttonStyle='btn--outline'>INGRESAR</Button>
+                  <Link to="/login" className="btn-link">
+                    <Button buttonStyle="btn--outline">INGRESAR</Button>
                   </Link>
                 ) : (
                   <Link to="/login" className="btn-link">
@@ -156,4 +175,9 @@ const Navbar = () => {
     </>
   );
 };
-export default Navbar;
+// export default Navbar;
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+  errors: state.errors,
+});
+export default connect(mapStateToProps)(Navbar);
