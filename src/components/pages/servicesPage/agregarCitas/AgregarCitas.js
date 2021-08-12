@@ -79,11 +79,14 @@ export default class AgregarCitas extends Component {
       }    
 
     render() {
+        
+        let myDate = new Date();
+        
         return (
             <div className="citas-container">  
 
                 <div className="formulario"> 
-                <h2>AGENDAR CITA</h2>
+                <h2>AGENDAR CITA CON VETERINARIO</h2>
                     <hr/>  
                 <div className="form-wrapper">       
                     <Form onSubmit={this.onSubmit}>
@@ -91,7 +94,9 @@ export default class AgregarCitas extends Component {
                             <Form.Group as={Col}  controlId="formGridName">
                                 <Form.Label>Nombre</Form.Label>
                                 <Form.Control 
+                                type="text" 
                                 placeholder="Ingrese su name completo" 
+                                required
                                 value={this.state.name}        
                                 onChange={this.onChangeName}/>
                                 <Form.Text className="text-muted">
@@ -105,6 +110,7 @@ export default class AgregarCitas extends Component {
                             <Form.Label>Email</Form.Label>
                             <Form.Control 
                             type="email" 
+                            required
                             placeholder="Ingrese su email" 
                             value={this.state.email}
                             onChange={this.onChangeEmail}/>
@@ -121,6 +127,8 @@ export default class AgregarCitas extends Component {
                                     type="date"
                                     name="fecha"
                                     autoComplete="off"
+                                    min = {myDate.toISOString().split('T')[0]}
+                                    required
                                     value={this.state.fecha}
                                     onChange={this.onChangeFecha}
                                     className="form-control">
@@ -145,7 +153,7 @@ export default class AgregarCitas extends Component {
                                 </input>
                                 </div>
                                 <Form.Text className="text-muted">
-                                    Programa su cita de 8:00 AM a 6:00 PM.
+                                    Programe su cita de 8:00 AM a 6:00 PM.
                                 </Form.Text>
                             </Form.Group>
                         </Row>
@@ -154,11 +162,11 @@ export default class AgregarCitas extends Component {
                         <Form.Group className="mb-3" controlId="formGridObservaciones" >
                             <Form.Label>Observaciones</Form.Label>              
                             <Form.Control 
-                            as="textarea"
-                            placeholder="Escriba las observaciones pertinentes" 
-                            style={{ height: '100px' }}
-                            value={this.state.observaciones}
-                            onChange={this.onChangeObservaciones}/>                            
+                                as="textarea"
+                                placeholder="Escribe las observaciones pertinentes de tus mascotas" 
+                                style={{ height: '100px' }}
+                                value={this.state.observaciones}
+                                onChange={this.onChangeObservaciones}/>                            
                         </Form.Group>    
                                     
                         <div className="d-grid gap-2 text-center">

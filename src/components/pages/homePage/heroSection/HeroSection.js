@@ -24,7 +24,7 @@ const HeroSection = () => {
                                             </h1>
                                 <p className="hero-subtitle">Todo lo que necesitas en un sólo lugar.</p>
                                 <div className="d-grid gap-2 text-center col text-center">
-                                <Link to="/services">
+                                <Link to="/login">
                                     <Button type="submit" size="lg">
                                         PIDE UNA CITA!
                                     </Button>
@@ -43,7 +43,7 @@ const HeroSection = () => {
                                 <h1 className="display-4 text-center hero-title">Animal Care Foundation
                                             </h1>
                                 <p className="hero-subtitle">Todo lo que necesitas en un sólo lugar.</p>
-                                <Link to="/services">
+                                <Link to="/login">
                                     <Button type="submit" size="lg">
                                         PIDE UNA CITA!
                                     </Button>
@@ -61,7 +61,7 @@ const HeroSection = () => {
                                 <h1 className="display-4 text-center hero-title">Animal Care Foundation
                                             </h1>
                                 <p className="hero-subtitle">Todo lo que necesitas en un sólo lugar.</p>
-                                <Link to="/services">
+                                <Link to="/login">
                                     <Button type="submit" size="lg">
                                         PIDE UNA CITA!
                                     </Button>
@@ -79,7 +79,7 @@ const HeroSection = () => {
                                 <h1 className="display-4 text-center hero-title">Animal Care Foundation
                                             </h1>
                                 <p className="hero-subtitle">Todo lo que necesitas en un sólo lugar.</p>
-                                <Link to="/services">
+                                <Link to="/login">
                                     <Button type="submit" size="lg">
                                         PIDE UNA CITA!
                                     </Button>
@@ -97,7 +97,7 @@ const HeroSection = () => {
                                 <h1 className="display-4 text-center hero-title">Animal Care Foundation
                                             </h1>
                                 <p className="hero-subtitle">Todo lo que necesitas en un sólo lugar.</p>
-                                <Link to="/services">
+                                <Link to="/login">
                                     <Button type="submit" size="lg">
                                         PIDE UNA CITA!
                                     </Button>
@@ -115,7 +115,7 @@ const HeroSection = () => {
                                 <h1 className="display-4 text-center hero-title">Animal Care Foundation
                                             </h1>
                                 <p className="hero-subtitle">Todo lo que necesitas en un sólo lugar.</p>
-                                <Link to="/services">
+                                <Link to="/login">
                                     <Button type="submit" size="lg">
                                         PIDE UNA CITA!
                                     </Button>
