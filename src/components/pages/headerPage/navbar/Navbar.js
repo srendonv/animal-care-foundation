@@ -9,8 +9,9 @@ import { IconContext } from "react-icons/lib";
 import { Link as ScrollLink } from "react-scroll";
 import { HashLink } from "react-router-hash-link";
 import { connect } from "react-redux";
+import {logoutUser} from "../../../../actions/authActions"
 
-const Navbar = ({auth}) => {
+const Navbar = ({ auth,logoutUser }) => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
   const [isAuthenticated, setIsAuthenticated] = useState(auth.isAuthenticated);
@@ -140,34 +141,48 @@ const Navbar = ({auth}) => {
                 </HashLink>
               </li>
 
-              {auth.isAuthenticated ? (
+              {button ? (
+                auth.isAuthenticated ? (
+                  <li className="nav-btn">
+                    <Link to="/login" className="btn-link">
+                      <Button buttonStyle="btn--outline" onClick={()=>logoutUser()}>SALIR</Button>
+                    </Link>
+                  </li>
+                ) : (
+                  <>
+                    <li className="nav-btn">
+                      <Link to="/register" className="btn-link">
+                        <Button buttonStyle="btn--outline">REGISTRARSE</Button>
+                      </Link>
+                    </li>
+                    <li className="nav-btn">
+                      <Link to="/login" className="btn-link">
+                        <Button buttonStyle="btn--outline">INGRESAR</Button>
+                      </Link>
+                    </li>
+                  </>
+                )
+              ) : auth.isAuthenticated ? (
                 <Link to="/login" className="btn-link">
-                  <Button buttonStyle="btn--outline">SALIR</Button>
-                  {/* <Button buttonStyle="btn--outline">SALIR</Button> */}
+                  <Button
+                    buttonStyle="btn--outline"
+                    buttonSize="btn--mobile"
+                    onClick={closeMobileMenu}
+                  >
+                    SALIR
+                  </Button>
                 </Link>
               ) : (
                 <Link to="/login" className="btn-link">
-                  <Button buttonStyle="btn--outline">INGRESAR</Button>
+                  <Button
+                    buttonStyle="btn--outline"
+                    buttonSize="btn--mobile"
+                    onClick={closeMobileMenu}
+                  >
+                    INGRESAR
+                  </Button>
                 </Link>
               )}
-
-              <li className="nav-btn">
-                {button ? (
-                  <Link to="/login" className="btn-link">
-                    <Button buttonStyle="btn--outline">INGRESAR</Button>
-                  </Link>
-                ) : (
-                  <Link to="/login" className="btn-link">
-                    <Button
-                      buttonStyle="btn--outline"
-                      buttonSize="btn--mobile"
-                      onClick={closeMobileMenu}
-                    >
-                      INGRESAR
-                    </Button>
-                  </Link>
-                )}
-              </li>
             </ul>
           </div>
         </nav>
@@ -180,4 +195,4 @@ const mapStateToProps = (state) => ({
   auth: state.auth,
   errors: state.errors,
 });
-export default connect(mapStateToProps)(Navbar);
+export default connect(mapStateToProps,{logoutUser})(Navbar);
