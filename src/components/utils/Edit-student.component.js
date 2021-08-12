@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
 import axios from 'axios';
-import {backHost} from '../config/env';
+import {backHost} from '../../config/env';
 
 export default class EditStudent extends Component {
 

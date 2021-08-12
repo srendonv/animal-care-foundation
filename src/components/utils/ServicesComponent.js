@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import CitasApp from '../container/CitasApp'
+import CitasApp from './container/CitasApp'
 
 export class servicesComponent extends Component {
     render() {

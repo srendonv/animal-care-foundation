@@ -2,7 +2,7 @@
     /* background: #1c2237; */
     background: #4B4359;
     display: flex;
-    height: 90px;
+    height: 120px;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
@@ -14,7 +14,7 @@
   .navbar-container {
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 120px;
   }
   
   .container {
