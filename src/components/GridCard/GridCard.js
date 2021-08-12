@@ -88,8 +88,6 @@ export default function AutoGrid() {
                 role={team_list[2].role}
             />
         </Grid>
-      </Grid>
-      <Grid container spacing={3}>
         <Grid item xs>
             <MediaCard
                 name={team_list[3].name}
