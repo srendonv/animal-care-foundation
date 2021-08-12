@@ -104,7 +104,7 @@ const Footer = () => {
                             </div>
                             <div className='website-rights'>Animal Care © 2021</div>
                             <div className='social-icons'> 
-                                <a href="https://www.dev.azure.com/srendonv/AnimalCareFoundation/" target="_blank" rel="noreferrer">
+                                <a href="https://dev.azure.com/srendonv/AnimalCareFoundation/" target="_blank" rel="noreferrer">
 				                <APIManagement size={32} color="white" /></a>
                                 
                                 <a href="https://www.instagram.com/imastereducacion/?hl=es" target="_blank" rel="noreferrer">
