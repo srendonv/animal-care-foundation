@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { logoutUser } from "../../../actions/authActions";
+import AgregarCitas from '../servicesPage/agregarCitas/AgregarCitas'
+
+
 class Dashboard extends Component {
   onLogoutClick = (e) => {
     e.preventDefault();
@@ -9,31 +12,50 @@ class Dashboard extends Component {
   };
   render() {
     const { user } = this.props.auth;
+
     return (
-      <div style={{ height: "75vh" }} className="container valign-wrapper dashboard-container">
+
+      <div className="container valign-wrapper dashboard-container">        
+        
         <div className="row">
           <div className="col s12 center-align">
             <h4>
-              <b>Hey there,</b> {user.name.split(" ")[0]}
+              <b>Hola,</b> {user.name.split(" ")[0]}
               <p className="flow-text grey-text text-darken-1">
-                You are logged into a full-stack{" "}
-                <span style={{ fontFamily: "monospace" }}>MERN</span> app 👏
+                Bienvenido a <b>Animal Care Foundation </b>{" "} 🐶
               </p>
             </h4>
-            <button
+            
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col s12 center-align">
+
+          <AgregarCitas />
+            
+          </div>
+
+        </div>
+
+        <div className="row">
+          <div className="col s12 center-align">
+          <button
               style={{
                 width: "150px",
                 borderRadius: "3px",
                 letterSpacing: "1.5px",
                 marginTop: "1rem",
+                marginBottom: "2rem"
               }}
               onClick={this.onLogoutClick}
               className="btn btn-large waves-effect waves-light hoverable blue accent-3"
             >
-              Logout
+              LOGOUT
             </button>
           </div>
         </div>
+
       </div>
     );
   }

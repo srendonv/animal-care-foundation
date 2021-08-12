@@ -18,6 +18,7 @@ import store from "./store";
 import CreateStudent from "./components/utils/createStudent/Create-student.component";
 import EditStudent from "./components/utils/Edit-student.component";
 import StudentList from "./components/utils/Student-list.component";
+// eslint-disable-next-line
 import AgregarCitas from "./components/pages/servicesPage/agregarCitas/AgregarCitas";
 import Navbar from "./components/pages/headerPage/navbar/Navbar";
 // eslint-disable-next-line
@@ -70,12 +71,8 @@ class App extends Component {
                       <Route path="/create-student" component={CreateStudent} />
                       <Route path="/edit-student/:id" component={EditStudent} />
                       <Route path="/student-list" component={StudentList} />
-                      <Route path="/services" component={AgregarCitas} />
-                      <Route
-                        path="/customer-create"
-                        component={CustomerCreate}
-                      />
-                      <PrivateRoute
+                      <Route path="/customer-create" component={CustomerCreate} />
+                      <PrivateRoute 
                         exact
                         path="/dashboard"
                         component={Dashboard}
