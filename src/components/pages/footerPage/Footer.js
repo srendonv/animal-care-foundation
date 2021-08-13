@@ -9,9 +9,10 @@ import './Footer.css';
 import { MapContainer, TileLayer,Popup, Circle, FeatureGroup} from 'react-leaflet';
 // eslint-disable-next-line
 import { Marker, LayerGroup, Rectangle } from 'react-leaflet';
-import { FaInstagram, FaYoutube, FaTwitter, FaFacebook, FaPhoneAlt } from 'react-icons/fa';
+import { FaInstagram, FaYoutube, FaTwitter, FaFacebook, FaPhoneAlt, FaGithub } from 'react-icons/fa';
 import { MdPets, MdMail } from 'react-icons/md';
 import { ImHome3, ImWhatsapp } from 'react-icons/im';
+import { FiBookOpen } from 'react-icons/fi';
 import {APIManagement} from 'azure-react-icons';
 // eslint-disable-next-line
 import {  iconMap  } from './Icons';
@@ -103,7 +104,14 @@ const Footer = () => {
                                 </Link>
                             </div>
                             <div className='website-rights'>Animal Care © 2021</div>
-                            <div className='social-icons'> 
+                            <div className='social-icons'>    
+
+                                <a href="https://github.com/srendonv/animal-care-foundation" target="_blank" rel="noreferrer">
+				                <FaGithub size={25} color="white" /></a>        
+                            
+                                <a href="https://animalcarefoundation.gitbook.io/animalcarefoundation/" target="_blank" rel="noreferrer">
+				                <FiBookOpen size={25} color="white" /></a>                             
+
                                 <a href="https://dev.azure.com/srendonv/AnimalCareFoundation/" target="_blank" rel="noreferrer">
 				                <APIManagement size={32} color="white" /></a>
                                 

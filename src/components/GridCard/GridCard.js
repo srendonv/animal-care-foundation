@@ -1,10 +1,14 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+// eslint-disable-next-line
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 
 import jelambrar_image from '../../assets/images/team/jelambrar.jpeg'
-import mccastano_image from '../../assets/images/team/mccastano.png'
+import mcastano_image from '../../assets/images/team/mcastan0.png'
+import srendonv_image from '../../assets/images/team/srendonv.png'
+import henryposa_image from '../../assets/images/team/henryposa.png'
+// eslint-disable-next-line
 import user_image from '../../assets/images/team/user.jpg'
 
 import MediaCard from '../MediaCard/MediaCard'
@@ -24,11 +28,11 @@ const useStyles = makeStyles((theme) => ({
 
 const team_list = [
     {
-        "name": "Michaell Castaño",
+        "name": "Michell Castaño",
         "role": "Fullstack developer",
         "urlgithub": "https://www.github.com/mcastan0",
         "urllinkedin": "https://www.linkedin.com/in/andres-castaño-ab35b46b",
-        "image": mccastano_image
+        "image": mcastano_image
     },
     {
         "name": "Jorge Lambraño",
@@ -42,14 +46,14 @@ const team_list = [
         "role": "Fullstack developer",
         "urlgithub": "https://www.github.com/Henryposa",
         "urllinkedin": "",
-        "image": user_image
+        "image": henryposa_image
     },
     {
         "name": "Santiago Rendón",
         "role": "Fullstack developer",
         "urlgithub": "https://www.github.com/srendonv",
-        "urllinkedin": "",
-        "image": user_image
+        "urllinkedin": "https://www.linkedin.com/in/santiagorendon/",
+        "image": srendonv_image
     },
     
 ]

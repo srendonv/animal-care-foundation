@@ -8,6 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 
 import IconButton from '@material-ui/core/IconButton';
+// eslint-disable-next-line
 import Button from '@material-ui/core/Button';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
