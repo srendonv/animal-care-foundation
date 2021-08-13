@@ -60,8 +60,8 @@ const Footer = () => {
                             </div>   
                             <div className="address-icons-link" >
                                 <MdMail className='navbar-icon' /> 
-                                <a href="mailto:contacto@animalcarefoundation.xyz">
-                                contacto@animalcarefoundation.xyz</a>
+                                <a href="mailto:animalcarefoundation.xyz@gmail.com">
+                                animalcarefoundation.xyz@gmail.com</a>
                             </div>           
                             <div className="address-icons-link" >
                                 <FaPhoneAlt className='navbar-icon' /> 
