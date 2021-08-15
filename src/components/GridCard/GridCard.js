@@ -45,7 +45,7 @@ const team_list = [
         "name": "Luis Posada",
         "role": "Fullstack developer",
         "urlgithub": "https://www.github.com/Henryposa",
-        "urllinkedin": "",
+        "urllinkedin": "https://www.linkedin.com/in/luiseposadao",
         "image": henryposa_image
     },
     {
