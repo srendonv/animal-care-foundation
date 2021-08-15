@@ -11,7 +11,9 @@ if (api_env === "development") {
   });
 
   module.exports = {
-    appEnvironment: process.env.API_ENV,
+    appEnvironment: process.env.API_ENV,    
+    mongoUser: process.env.MONGO_USER,
+    mongoPwd: process.env.MONGO_PWD,
     mongoDb: process.env.MONGO_DB,
     mongoHost: process.env.MONGO_HOST,  
     backHost: process.env.REACT_APP_API_DEV_HOST,
