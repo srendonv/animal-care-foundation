@@ -1,26 +1,74 @@
 import React from 'react'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+
+import { PricingTable, PricingSlot, PricingDetail } from 'react-pricing-table';
+
 import "./Planes.css"
 
-const Planes = () => {
-    return (
-        <div id="planes" className="planes-container">
-            <h1 className="display-5 text-center"><strong>Planes</strong></h1>  
+class Planes extends React.Component  {
 
-            <Card className="text-center">
-                <Card.Header>Featured</Card.Header>
-                <Card.Body>
-                    <Card.Title>ESTE ES EL COMPONENTE <strong>PLANES</strong></Card.Title>
-                    <Card.Text>
-                    With supporting text below as a natural lead-in to additional content.
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-                <Card.Footer className="text-muted">2 days ago</Card.Footer>
-            </Card>
-        </div>
+  render() {
+    return (
+      <div id="planes" className="planes-container">
+        <h1 className="display-5 text-center"><strong>Planes</strong></h1>
+  
+        <PricingTable highlightColor='#1976D2'>
+          <PricingSlot title='Básico' priceText='$59/mes' 
+            shouldDisplayButton={false} className="pricing-slot-acf">
+            <PricingDetail> Chequeo completo </PricingDetail>
+            <PricingDetail> Urgencia 24h </PricingDetail>
+            <PricingDetail> Guía nutricional </PricingDetail>
+            <PricingDetail> Desparasitación </PricingDetail>
+            <PricingDetail> Baños e Higiene </PricingDetail>
+            <PricingDetail> Vacunación </PricingDetail>
+            <PricingDetail>
+              <Button variant="primary" className="button-panel-acf">
+                Ver más
+              </Button>
+            </PricingDetail>
+          </PricingSlot>
+          <PricingSlot title='Premium' className="pricing-slot-acf"
+            priceText='$99/mes' shouldDisplayButton={false}>
+            <PricingDetail> Chequeo completo </PricingDetail>
+            <PricingDetail> Urgencia 24h </PricingDetail>
+            <PricingDetail> Guía nutricional </PricingDetail>
+            <PricingDetail> Desparasitación </PricingDetail>
+            <PricingDetail> Exámenes y Laboratorio clínico </PricingDetail>
+            <PricingDetail> Baños e Higiene </PricingDetail>
+            <PricingDetail> Vacunación </PricingDetail>
+            <PricingDetail> Limpieza dental </PricingDetail>
+            <PricingDetail> </PricingDetail>
+            <PricingDetail>
+              <Button variant="primary" className="button-panel-acf">
+                Ver más
+              </Button>
+            </PricingDetail>
+          </PricingSlot>
+          <PricingSlot title='Completo' priceText='$149/mes'
+            shouldDisplayButton={false} className="pricing-slot-acf">
+            <PricingDetail> Chequeo completo </PricingDetail>
+            <PricingDetail> Urgencia 24h </PricingDetail>
+            <PricingDetail> Guía nutricional </PricingDetail>
+            <PricingDetail> Desparasitación </PricingDetail>
+            <PricingDetail> Exámenes y Laboratorio clínico </PricingDetail>
+            <PricingDetail> Vacunación </PricingDetail>
+            <PricingDetail> Baños e Higiene </PricingDetail>
+            <PricingDetail> Limpieza dental </PricingDetail>
+            <PricingDetail> Educación y capacitación Continua </PricingDetail>
+            <PricingDetail> Inseminación artificial </PricingDetail>
+            <PricingDetail> Guardería y terapia </PricingDetail>
+            <PricingDetail>
+              <Button className="button-panel-acf" variant="primary">
+                Ver más
+              </Button>
+            </PricingDetail>
+          </PricingSlot>
+        </PricingTable>
+      </div>
     )
+  }
+
 }
 
 export default Planes
