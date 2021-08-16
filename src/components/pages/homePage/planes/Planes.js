@@ -25,11 +25,6 @@ class Planes extends React.Component  {
             <PricingDetail> Desparasitación </PricingDetail>
             <PricingDetail> Baños e Higiene </PricingDetail>
             <PricingDetail> Vacunación </PricingDetail>
-            <PricingDetail>
-              <Button variant="primary" className="button-panel-acf">
-                Ver más
-              </Button>
-            </PricingDetail>
           </PricingSlot>
           <PricingSlot title='Premium' className="pricing-slot-acf"
             priceText='$99/mes' shouldDisplayButton={false}>
@@ -42,11 +37,6 @@ class Planes extends React.Component  {
             <PricingDetail> Vacunación </PricingDetail>
             <PricingDetail> Limpieza dental </PricingDetail>
             <PricingDetail> </PricingDetail>
-            <PricingDetail>
-              <Button variant="primary" className="button-panel-acf">
-                Ver más
-              </Button>
-            </PricingDetail>
           </PricingSlot>
           <PricingSlot title='Completo' priceText='$149/mes'
             shouldDisplayButton={false} className="pricing-slot-acf">
@@ -61,11 +51,6 @@ class Planes extends React.Component  {
             <PricingDetail> Educación y capacitación Continua </PricingDetail>
             <PricingDetail> Inseminación artificial </PricingDetail>
             <PricingDetail> Guardería y terapia </PricingDetail>
-            <PricingDetail>
-              <Button className="button-panel-acf" variant="primary">
-                Ver más
-              </Button>
-            </PricingDetail>
           </PricingSlot>
         </PricingTable>
       </div>
