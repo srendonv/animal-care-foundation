@@ -47,7 +47,7 @@ class Login extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div className="form-wrapper auth-container">
+      <div className="form-wrapper auth-container" id="auth">
         <div>
           <h4>
             <b>Usuario registrado</b>
