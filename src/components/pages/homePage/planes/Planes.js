@@ -1,5 +1,4 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
 
 import { PricingTable, PricingSlot, PricingDetail } from 'react-pricing-table';
@@ -13,6 +12,10 @@ class Planes extends React.Component  {
       <div id="planes" className="planes-container">
         <h1 className="display-5 text-center"><strong>Planes</strong></h1>
   
+        <h5 className="display-6 text-center">
+          <strong>Estos son nuestros planes disponibles para tu mascota</strong>
+        </h5>
+
         <PricingTable highlightColor='#1976D2'>
           <PricingSlot title='Básico' priceText='$59/mes' 
             shouldDisplayButton={false} className="pricing-slot-acf">
