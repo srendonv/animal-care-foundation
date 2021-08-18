@@ -54,7 +54,7 @@ const Beneficios = () => {
             </IconButton>
             <Card.Title>
               <h4 className="display-5 text-center">
-                <strong>Infraestructua</strong>
+                <strong>Infraestructura</strong>
               </h4>
             </Card.Title>
             <Card.Text>
