@@ -1,0 +1,12 @@
+{
+    "instructions": [
+                {   
+                    "0": "To enable https on front (nginx server) you must to do:",
+                    "1": "Copy the file index.html from the folder animal-care-foundation/public/assets/index_https",
+                    "2": "Paste the file index.html to the folder animal-care-foundation/public",
+                    "3": "The key is this: <meta http-equiv='Content-Security-Policy' content='upgrade-insecure-requests'>", 
+                    "4": "With the before key line, the front require https",                 
+                    "5": "Without the before key line, the front doesn't require https and run in http",                                 
+                }
+    ]    
+}

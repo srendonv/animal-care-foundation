@@ -1,0 +1,13 @@
+.beneficios-container {
+    background-color: #fff;
+    padding: 1rem 0 1rem 0;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+  }
+
+  .beneficios-container h1 {
+    color: #000;
+    padding: 20px;
+  }
